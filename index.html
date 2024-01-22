@@ -15,13 +15,14 @@
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet">
 
     <link href="style.css" rel="stylesheet">
+    <script src="index.js"></script>
 </head>
 
 <body>
 
 
 <!--    =================================== header =================================-->
-<div style="position: fixed; width: 100%; z-index: 10000">
+<div style="position: fixed; width: 100%; z-index: 10000; top: 0;">
     <div class="div-2">
                 <span class="span">
                     <img
@@ -30,12 +31,18 @@
                             srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/42d5345b1a8af8514d773dde84431ffa7c34f596adf3dbb03e2e9baa8fa325db?apiKey=1e1d1af84687413c90642ed83011e3eb&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/42d5345b1a8af8514d773dde84431ffa7c34f596adf3dbb03e2e9baa8fa325db?apiKey=1e1d1af84687413c90642ed83011e3eb&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/42d5345b1a8af8514d773dde84431ffa7c34f596adf3dbb03e2e9baa8fa325db?apiKey=1e1d1af84687413c90642ed83011e3eb&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/42d5345b1a8af8514d773dde84431ffa7c34f596adf3dbb03e2e9baa8fa325db?apiKey=1e1d1af84687413c90642ed83011e3eb&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/42d5345b1a8af8514d773dde84431ffa7c34f596adf3dbb03e2e9baa8fa325db?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/42d5345b1a8af8514d773dde84431ffa7c34f596adf3dbb03e2e9baa8fa325db?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/42d5345b1a8af8514d773dde84431ffa7c34f596adf3dbb03e2e9baa8fa325db?apiKey=1e1d1af84687413c90642ed83011e3eb&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/42d5345b1a8af8514d773dde84431ffa7c34f596adf3dbb03e2e9baa8fa325db?apiKey=1e1d1af84687413c90642ed83011e3eb&"
                     />
              <div class="div-3" style="margin-right: 750px">Burger Delight</div>
-                <span class="span-2">
-      <div class="div-4" style="font-size: 20px">Home</div>
-      <div class="div-5" style="font-size: 20px">Food</div>
-      <div class="div-6" style="font-size: 20px">Contact Us</div>
-      <div class="div-7" style="font-size: 20px">Feedback</div>
-      <div class="div-8" style="font-size: 20px">My Orders</div>
+
+                    <span class="span-2">
+                    <nav>
+                        <a class="nav-item" href="#" onclick="navigateTo('home')">Home</a>
+                        <a class="nav-item" href="#" onclick="navigateTo('food')">Food</a>
+                        <a class="nav-item" href="#" onclick="navigateTo('contact')">Contact Us</a>
+                        <a class="nav-item" href="#" onclick="navigateTo('section3')">FeedBack</a>
+                        <a class="nav-item" href="#" onclick="navigateTo('section3')">My Orders</a>
+                    </nav>
+
+
+
       <img
               class="img-2"
               loading="lazy"
@@ -56,16 +63,17 @@
 
 
 <!--    ================================= dashboard ================================-->
-<div class="div-9">
-    <div class="div-10">
-        <div class="column" style="margin-top: 20px">
-            <img
-                    class="img-4"
-                    loading="lazy"
-                    srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&"
-            />
-        </div>
-        <div class="column-2">
+<div id="home" class="content-section">
+    <div class="div-9" >
+        <div class="div-10">
+            <div class="column" style="margin-top: 20px">
+                <img
+                        class="img-4"
+                        loading="lazy"
+                        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&"
+                />
+            </div>
+            <div class="column-2">
         <span class="span-3" style="padding-top: 100px">
           <div class="div-11"
                style="display: flex; flex-direction: column; justify-content:center; align-items: center">
@@ -80,10 +88,10 @@
             <span class="span-5">Contact Us</span>
           </div>
         </span>
+            </div>
         </div>
     </div>
-</div>
-<span class="span-6" style="align-items: end; display: flex; height: 650px;">
+    <span class="span-6" style="align-items: end; display: flex; height: 650px;">
         <div class="div-15" style="padding-left: 200px; width: 1100px">
             <span style="font-weight: 600; font-size: 35px">
               Welcome to Burger Delight
@@ -134,294 +142,346 @@
           />
         </div>
   </span>
-<div class="div-16"
-     style="margin:auto; background-color: #171717; box-shadow: #767676; border-radius: 50px; padding: 30px 50px">
-        <span style="font-size: 25px">
+
+
+
+    <div
+         style="text-align: center; color: white; margin:auto; background-color: #0C0C0C; padding: 30px 250px">
+        <span style="font-size: 25px; text-align: center">
             Visit Us Today
         </span>
 
-    <br/>
-    <br/>
-    We invite you to come and experience the joy of Burger Delight. Whether
-    you're dining in with friends and family or ordering takeout, we promise
-    to deliver exceptional flavors and exceptional service. Join us today and
-    embark on a burger journey like no other!
+        <br/>
+        <br/>
+        We invite you to come and experience the joy of Burger Delight. Whether
+        you're dining in with friends and family or ordering takeout, we promise
+        to deliver exceptional flavors and exceptional service. Join us today and
+        embark on a burger journey like no other!
+    </div>
 </div>
 <!--    =======================================================================================-->
 
 
-<!--    ================================== food card ==================================-->
-<div class="card-main"><span>Burger</span></div>
-<br>
-<div class="food-container" style="width: 100%;">
-    <div class="food-card">
-        <div class="card custom-card">
-            <img alt="..." class="card-img" src="asset/image/burger2.png">
-            <div class="card-body">
-                <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
-                <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-            </div>
-        </div>
-    </div>
-    <div class="food-card">
-        <div class="card custom-card">
-            <img alt="..." class="card-img" src="asset/image/burger2.png">
-            <div class="card-body">
-                <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
-                <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-            </div>
-        </div>
-    </div>
-    <div class="food-card">
-        <div class="card custom-card">
-            <img alt="..." class="card-img" src="asset/image/burger2.png">
-            <div class="card-body">
-                <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
-                <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-            </div>
-        </div>
-    </div>
-    <div class="food-card">
-    <div class="card custom-card">
-        <img alt="..." class="card-img" src="asset/image/burger2.png">
-        <div class="card-body">
-            <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-            <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
-                the card's content.</p>
-            <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-        </div>
-    </div>
-</div>
-    <div class="food-card">
-        <div class="card custom-card">
-            <img alt="..." class="card-img" src="asset/image/burger2.png">
-            <div class="card-body">
-                <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
-                <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-            </div>
-        </div>
-    </div>
-    <div class="food-card">
-        <div class="card custom-card">
-            <img alt="..." class="card-img" src="asset/image/burger2.png">
-            <div class="card-body">
-                <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
-                <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-            </div>
-        </div>
-    </div>
-
-</div>
-<!--==========================================================================================-->
 
 
-
-
-<!--    ================================== food manage form ==================================-->
-<div class="container2">
+<!--===============================================================================================-->
+<div class="content-section" id="food">
+    <!--    ================================== food card ==================================-->
+    <div  id="burger-card" >
+    <div class="card-main" style="padding-top: 20px"><span>Burger</span></div>
     <br>
-    <hr style="width: 80%; margin: auto; opacity: 50%">
-    <div class="div-17">Burger Form</div><br>
-
-    <div class="mb-3" style="width: 350px; display: flex; ">
-        <label style="color: white">Search : </label>
-        <input style="margin-left:20px; padding-left:10px;  border: solid 1px #9a9292; border-radius: 5px; background: transparent; " type="text" id="search-burger-id" placeholder="B-0001">
-    </div>
-
-    <div class="form1">
-        <div style="align-self: end; margin-right: 100px">
-            <label class="form-label" style="margin-right: 0">Burger ID : B-0001</label>
-        </div>
-        <form >
-            <div style="margin-top: 20px; display: flex; flex-direction:column; justify-content: center; align-items: center">
-                <img alt="..." class="card-img" src="asset/image/burger2.png"
-                     style="width: 250px; height: 250px">
-                <br>
-                <div class="mb-3">
-                    <input class="form-control" type="file" id="burger-img" style="width: 250px; background: ghostwhite">
+    <div class="food-container" style="width: 100%;">
+        <div class="food-card">
+            <div class="card custom-card">
+                <img alt="..." class="card-img" src="asset/image/burger2.png">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
+                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                        of
+                        the card's content.</p>
+                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
                 </div>
             </div>
-
-            <div>
-                <div class="mb-3" style="width: 500px">
-                    <label for="burger-name" class="form-label">Burger Name :</label>
-                    <input style="background: ghostwhite" type="text" class="form-control" id="burger-name" placeholder="Cheese Chicken Burger">
-                </div>
-
-                <div class="mb-3" style="width: 500px">
-                    <label for="burger-desc" class="form-label">Description :</label>
-                    <textarea style="background: ghostwhite" class="form-control" id="burger-desc" rows="3"></textarea>
-                </div>
-
-                <div class="mb-3" style="width: 500px">
-                    <label for="burger-price" class="form-label">Price (RS) :</label>
-                    <input style="background: ghostwhite" type="text" class="form-control" id="burger-price" placeholder="400.00">
+        </div>
+        <div class="food-card">
+            <div class="card custom-card">
+                <img alt="..." class="card-img" src="asset/image/burger2.png">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
+                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                        of
+                        the card's content.</p>
+                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
                 </div>
             </div>
-
-            <div style="display: flex; justify-content: flex-end; align-items: end">
-                <button type="button" class="btn btn-primary" style="background-color: #c05d02; border: none; padding: 5px 20px; margin-right: 10px ">Save</button>
-                <button type="button" class="btn btn-primary" style="background-color: #9a9292; border: none; padding: 5px 16px">Delete</button>
-
-            </div>
-
-        </form>
-
-    </div>
-
-</div>
-<!--    =================================================================================-->
-
-
-
-
-<!--    ================================== Beverage card ==================================-->
-<div class="card-main"><span>Beverages</span></div>
-<br>
-<div class="food-container" style="width: 100%;">
-    <div class="food-card">
-        <div class="card custom-card">
-            <img alt="..." class="card-img" src="asset/image/beverage.png">
-            <div class="card-body">
-                <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
-                <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+        </div>
+        <div class="food-card">
+            <div class="card custom-card">
+                <img alt="..." class="card-img" src="asset/image/burger2.png">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
+                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                        of
+                        the card's content.</p>
+                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="food-card">
-        <div class="card custom-card">
-            <img alt="..." class="card-img" src="asset/image/beverage.png">
-            <div class="card-body">
-                <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
-                <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+        <div class="food-card">
+            <div class="card custom-card">
+                <img alt="..." class="card-img" src="asset/image/burger2.png">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
+                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                        of
+                        the card's content.</p>
+                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="food-card">
-        <div class="card custom-card">
-            <img alt="..." class="card-img" src="asset/image/beverage.png">
-            <div class="card-body">
-                <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
-                <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+        <div class="food-card">
+            <div class="card custom-card">
+                <img alt="..." class="card-img" src="asset/image/burger2.png">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
+                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                        of
+                        the card's content.</p>
+                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="food-card">
-        <div class="card custom-card">
-            <img alt="..." class="card-img" src="asset/image/beverage.png">
-            <div class="card-body">
-                <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
-                <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+        <div class="food-card">
+            <div class="card custom-card">
+                <img alt="..." class="card-img" src="asset/image/burger2.png">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
+                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                        of
+                        the card's content.</p>
+                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="food-card">
-        <div class="card custom-card">
-            <img alt="..." class="card-img" src="asset/image/beverage.png">
-            <div class="card-body">
-                <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
-                <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-            </div>
-        </div>
-    </div>
-    <div class="food-card">
-        <div class="card custom-card">
-            <img alt="..." class="card-img" src="asset/image/beverage.png">
-            <div class="card-body">
-                <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
-                <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-            </div>
-        </div>
+
     </div>
 
-</div>
-<!--==========================================================================================-->
+    </div>
+    <!--==========================================================================================-->
 
 
+    <!--    ================================== food manage form ==================================-->
+    <div id="burger-form" class="container2">
+        <br>
+        <hr style="width: 80%; margin: auto; opacity: 50%">
+        <div class="div-17">Burger Form</div>
+        <br>
 
-<!--    ================================== beverage manage form ==================================-->
-<div class="container2">
+        <div class="mb-3" style="width: 350px; display: flex; ">
+            <label style="color: white">Search : </label>
+            <input id="search-burger-id"
+                   placeholder="B-0001"
+                   style="margin-left:20px; padding-left:10px;  border: solid 1px #9a9292; border-radius: 5px; background: transparent; "
+                   type="text">
+        </div>
+
+        <div class="form1">
+            <div style="align-self: end; margin-right: 100px">
+                <label class="form-label" style="margin-right: 0">Burger ID : B-0001</label>
+            </div>
+            <form>
+                <div style="margin-top: 20px; display: flex; flex-direction:column; justify-content: center; align-items: center">
+                    <img alt="..." class="card-img" src="asset/image/burger2.png"
+                         style="width: 250px; height: 250px">
+                    <br>
+                    <div class="mb-3">
+                        <input class="form-control" id="burger-img" style="width: 250px; background: ghostwhite"
+                               type="file">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="mb-3" style="width: 500px">
+                        <label class="form-label" for="burger-name">Burger Name :</label>
+                        <input class="form-control" id="burger-name" placeholder="Cheese Chicken Burger"
+                               style="background: ghostwhite"
+                               type="text">
+                    </div>
+
+                    <div class="mb-3" style="width: 500px">
+                        <label class="form-label" for="burger-desc">Description :</label>
+                        <textarea class="form-control" id="burger-desc" rows="3"
+                                  style="background: ghostwhite"></textarea>
+                    </div>
+
+                    <div class="mb-3" style="width: 500px">
+                        <label class="form-label" for="burger-price">Price (RS) :</label>
+                        <input class="form-control" id="burger-price" placeholder="400.00"
+                               style="background: ghostwhite"
+                               type="text">
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: flex-end; align-items: end">
+                    <button class="btn btn-primary"
+                            style="background-color: #c05d02; border: none; padding: 5px 20px; margin-right: 10px "
+                            type="button">Save
+                    </button>
+                    <button class="btn btn-primary" style="background-color: #9a9292; border: none; padding: 5px 16px"
+                            type="button">Delete
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+    <!--    =================================================================================-->
+
+
+    <!--    ================================== Beverage card ==================================-->
+    <div  id="beverage-card" >
+    <div class="card-main"><span>Beverages</span></div>
     <br>
-    <hr style="width: 80%; margin: auto; opacity: 50%">
-    <div class="div-17">Beverage Form</div><br>
-
-    <div class="mb-3" style="width: 350px; display: flex; ">
-        <label style="color: white">Search : </label>
-        <input style="margin-left:20px; padding-left:10px;  border: solid 1px #9a9292; border-radius: 5px; background: transparent; " type="text" id="search-beverage-id" placeholder="D-0001">
-    </div>
-
-    <div class="form1">
-        <div style="align-self: end; margin-right: 100px">
-            <label class="form-label" style="margin-right: 0">Beverage ID : D-0001</label>
+    <div class="food-container" style="width: 100%;">
+        <div class="food-card">
+            <div class="card custom-card">
+                <img alt="..." class="card-img" src="asset/image/beverage.png">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
+                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                        of
+                        the card's content.</p>
+                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+                </div>
+            </div>
         </div>
-        <form >
-            <div style="margin-top: 20px; display: flex; flex-direction:column; justify-content: center; align-items: center">
-                <img alt="..." class="card-img" src="asset/image/beverage.png"
-                     style="width: 250px; height: 250px">
-                <br>
-                <div class="mb-3">
-                    <input class="form-control" type="file" id="beverage-img" style="width: 250px; background: ghostwhite">
+        <div class="food-card">
+            <div class="card custom-card">
+                <img alt="..." class="card-img" src="asset/image/beverage.png">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
+                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                        of
+                        the card's content.</p>
+                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
                 </div>
             </div>
-
-            <div>
-                <div class="mb-3" style="width: 500px">
-                    <label for="beverage-name" class="form-label">Beverage Name :</label>
-                    <input style="background: ghostwhite" type="text" class="form-control" id="beverage-name" placeholder="Soft Drink">
-                </div>
-
-                <div class="mb-3" style="width: 500px">
-                    <label for="beverage-desc" class="form-label">Description :</label>
-                    <textarea style="background: ghostwhite" class="form-control" id="beverage-desc" rows="3"></textarea>
-                </div>
-
-                <div class="mb-3" style="width: 500px">
-                    <label for="beverage-price" class="form-label">Price (RS) :</label>
-                    <input style="background: ghostwhite" type="text" class="form-control" id="beverage-price" placeholder="400.00">
+        </div>
+        <div class="food-card">
+            <div class="card custom-card">
+                <img alt="..." class="card-img" src="asset/image/beverage.png">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
+                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                        of
+                        the card's content.</p>
+                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
                 </div>
             </div>
-
-            <div style="display: flex; justify-content: flex-end; align-items: end">
-                <button type="button" class="btn btn-primary" style="background-color: #c05d02; border: none; padding: 5px 20px; margin-right: 10px ">Save</button>
-                <button type="button" class="btn btn-primary" style="background-color: #9a9292; border: none; padding: 5px 16px">Delete</button>
-
+        </div>
+        <div class="food-card">
+            <div class="card custom-card">
+                <img alt="..." class="card-img" src="asset/image/beverage.png">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
+                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                        of
+                        the card's content.</p>
+                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+                </div>
             </div>
-
-        </form>
+        </div>
+        <div class="food-card">
+            <div class="card custom-card">
+                <img alt="..." class="card-img" src="asset/image/beverage.png">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
+                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                        of
+                        the card's content.</p>
+                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="food-card">
+            <div class="card custom-card">
+                <img alt="..." class="card-img" src="asset/image/beverage.png">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
+                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                        of
+                        the card's content.</p>
+                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+                </div>
+            </div>
+        </div>
 
     </div>
+    </div>
+    <!--==========================================================================================-->
+
+    <!--    ================================== beverage manage form ==================================-->
+    <div id="beverage-form" class="container2">
+        <br>
+        <hr style="width: 80%; margin: auto; opacity: 50%">
+        <div class="div-17">Beverage Form</div>
+        <br>
+
+        <div class="mb-3" style="width: 350px; display: flex; ">
+            <label style="color: white">Search : </label>
+            <input id="search-beverage-id"
+                   placeholder="D-0001"
+                   style="margin-left:20px; padding-left:10px;  border: solid 1px #9a9292; border-radius: 5px; background: transparent; "
+                   type="text">
+        </div>
+
+        <div class="form1">
+            <div style="align-self: end; margin-right: 100px">
+                <label class="form-label" style="margin-right: 0">Beverage ID : D-0001</label>
+            </div>
+            <form>
+                <div style="margin-top: 20px; display: flex; flex-direction:column; justify-content: center; align-items: center">
+                    <img alt="..." class="card-img" src="asset/image/beverage.png"
+                         style="width: 250px; height: 250px">
+                    <br>
+                    <div class="mb-3">
+                        <input class="form-control" id="beverage-img" style="width: 250px; background: ghostwhite"
+                               type="file">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="mb-3" style="width: 500px">
+                        <label class="form-label" for="beverage-name">Beverage Name :</label>
+                        <input class="form-control" id="beverage-name" placeholder="Soft Drink"
+                               style="background: ghostwhite"
+                               type="text">
+                    </div>
+
+                    <div class="mb-3" style="width: 500px">
+                        <label class="form-label" for="beverage-desc">Description :</label>
+                        <textarea class="form-control" id="beverage-desc" rows="3"
+                                  style="background: ghostwhite"></textarea>
+                    </div>
+
+                    <div class="mb-3" style="width: 500px">
+                        <label class="form-label" for="beverage-price">Price (RS) :</label>
+                        <input class="form-control" id="beverage-price" placeholder="400.00"
+                               style="background: ghostwhite"
+                               type="text">
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: flex-end; align-items: end">
+                    <button class="btn btn-primary"
+                            style="background-color: #c05d02; border: none; padding: 5px 20px; margin-right: 10px "
+                            type="button">Save
+                    </button>
+                    <button class="btn btn-primary" style="background-color: #9a9292; border: none; padding: 5px 16px"
+                            type="button">Delete
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+    <!--    =================================================================================-->
 
 </div>
-<!--    =================================================================================-->
+<!--===============================================================================================-->
 
 
 
 
 <!--    ================================== contact form ================================-->
-<div class="container2">
-    <div class="div-17">Contact Us</div>
+<div class="container2 content-section" id="contact">
+    <div class="card-main" style="padding-top: 20px"><span>Contact Us</span></div>
     <br>
     <hr style="width: 80%; margin: auto; opacity: 50%">
 
@@ -477,9 +537,8 @@
 <!--    ================================================================================-->
 
 
-
 <!--    ================================ footer =================================-->
-<div class="div-31" style="width: auto">
+<div class="div-31" style="margin-top: 100px; width: auto">
 
     <span class="span-10">
       <div class="div-32">
@@ -515,6 +574,7 @@
           </span>
         </span>
       </div>
+        <hr style="width: 80%; margin: auto; opacity: 50%">
       <div class="div-42" style="margin-top: 40px">
         Copyright c 2023 Burger Delight | Built by Ruvini Rangathara
       </div>
