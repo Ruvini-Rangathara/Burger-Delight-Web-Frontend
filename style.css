@@ -679,7 +679,7 @@ body {
     overflow-x: scroll;
 }
 
-.card-main{
+.card-main {
     margin-top: 40px;
     font-size: 80px;
     color: #9a9292;
@@ -689,7 +689,7 @@ body {
 
 }
 
-.btn-card{
+.btn-card {
     background-color: #c05d02;
     color: #fff;
     border: none;
@@ -701,18 +701,38 @@ body {
 }
 
 
-.custom-card{
+.custom-card {
     width: 360px;
     height: 570px;
     background-color: #171717;
     color: white;
 }
 
-.food-card{
+.food-card {
     margin-right: 80px;
 }
 
-.card-img{
-    width:360px;
+.card-img {
+    width: 360px;
     height: 360px;
+}
+
+.form1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 50%;
+    background-color: #171717;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

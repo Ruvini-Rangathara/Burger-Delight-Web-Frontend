@@ -151,7 +151,8 @@
 
 
 <!--    ================================== food card ==================================-->
-<div class="card-main"><span>Burger</span></div><br>
+<div class="card-main"><span>Burger</span></div>
+<br>
 <div class="food-container" style="width: 100%;">
     <div class="food-card">
         <div class="card custom-card">
@@ -160,7 +161,7 @@
                 <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
                 <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
                     the card's content.</p>
-                <button class="btn-card">View More...</button>
+                <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
             </div>
         </div>
     </div>
@@ -171,7 +172,7 @@
                 <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
                 <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
                     the card's content.</p>
-                <button class="btn-card">View More...</button>
+                <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
             </div>
         </div>
     </div>
@@ -182,10 +183,21 @@
                 <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
                 <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
                     the card's content.</p>
-                <button class="btn-card">View More...</button>
+                <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
             </div>
         </div>
     </div>
+    <div class="food-card">
+    <div class="card custom-card">
+        <img alt="..." class="card-img" src="asset/image/burger2.png">
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
+            <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
+                the card's content.</p>
+            <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+        </div>
+    </div>
+</div>
     <div class="food-card">
         <div class="card custom-card">
             <img alt="..." class="card-img" src="asset/image/burger2.png">
@@ -193,49 +205,86 @@
                 <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
                 <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
                     the card's content.</p>
-                <button class="btn-card">View More...</button>
+                <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
             </div>
         </div>
     </div>
-    <div class="food-card">
-        <div class="card custom-card">
-            <img alt="..." class="card-img" src="asset/image/burger2.png">
-            <div class="card-body">
-                <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
-                <button class="btn-card">View More...</button>
-            </div>
-        </div>
-    </div>
-    <div class="food-card">
-        <div class="card custom-card">
-            <img alt="..." class="card-img" src="asset/image/burger2.png">
-            <div class="card-body">
-                <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
-                <button class="btn-card">View More...</button>
-            </div>
-        </div>
-    </div>
+
 </div>
 <!--==========================================================================================-->
 
 
+
+
+<!--    ================================== food manage form ==================================-->
+<div class="container2">
+    <br>
+    <hr style="width: 80%; margin: auto; opacity: 50%">
+    <div class="div-17">Burger Form</div><br>
+
+    <div class="mb-3" style="width: 350px; display: flex; ">
+        <label for="burger-name" style="color: white">Search : </label>
+        <input style="margin-left:20px; padding-left:10px;  border: solid 1px #9a9292; border-radius: 5px; background: transparent; " type="text" id="search-burger-id" placeholder="B-0001">
+    </div>
+
+    <div class="form1">
+        <div style="align-self: end; margin-right: 100px">
+            <label class="form-label" style="margin-right: 0">Burger ID : B-0001</label>
+        </div>
+        <form >
+            <div style="margin-top: 20px; display: flex; flex-direction:column; justify-content: center; align-items: center">
+                <img alt="..." class="card-img" src="asset/image/burger2.png"
+                     style="width: 250px; height: 250px">
+                <br>
+                <div class="mb-3">
+                    <input class="form-control" type="file" id="burger-img" style="width: 250px; background: ghostwhite">
+                </div>
+            </div>
+
+            <div>
+                <div class="mb-3" style="width: 500px">
+                    <label for="burger-name" class="form-label">Burger Name :</label>
+                    <input style="background: ghostwhite" type="text" class="form-control" id="burger-name" placeholder="Cheese Chicken Burger">
+                </div>
+
+                <div class="mb-3" style="width: 500px">
+                    <label for="burger-desc" class="form-label">Description :</label>
+                    <textarea style="background: ghostwhite" class="form-control" id="burger-desc" rows="3"></textarea>
+                </div>
+
+                <div class="mb-3" style="width: 500px">
+                    <label for="burger-price" class="form-label">Price (RS) :</label>
+                    <input style="background: ghostwhite" type="text" class="form-control" id="burger-price" placeholder="400.00">
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; align-items: end">
+                <button type="button" class="btn btn-primary" style="background-color: #c05d02; border: none; padding: 5px 20px; margin-right: 10px ">Save</button>
+                <button type="button" class="btn btn-primary" style="background-color: #9a9292; border: none; padding: 5px 16px">Delete</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<!--    =================================================================================-->
 
 
 
 
 <!--    ================================== Beverage card ==================================-->
-<div class="card-main"><span>Beverages</span></div><br>
+<div class="card-main"><span>Beverages</span></div>
+<br>
 <div class="food-container" style="width: 100%;">
     <div class="food-card">
         <div class="card custom-card">
             <img alt="..." class="card-img" src="asset/image/beverage.png">
             <div class="card-body">
                 <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
+                <p style="font-size: 20px">Some quick example text to build on the card title and make up
+                    the bulk of
                     the card's content.</p>
                 <button class="btn-card">View More...</button>
             </div>
@@ -246,7 +295,8 @@
             <img alt="..." class="card-img" src="asset/image/beverage.png">
             <div class="card-body">
                 <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
+                <p style="font-size: 20px">Some quick example text to build on the card title and make up
+                    the bulk of
                     the card's content.</p>
                 <button class="btn-card">View More...</button>
             </div>
@@ -257,7 +307,8 @@
             <img alt="..." class="card-img" src="asset/image/beverage.png">
             <div class="card-body">
                 <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
+                <p style="font-size: 20px">Some quick example text to build on the card title and make up
+                    the bulk of
                     the card's content.</p>
                 <button class="btn-card">View More...</button>
             </div>
@@ -268,40 +319,41 @@
             <img alt="..." class="card-img" src="asset/image/beverage.png">
             <div class="card-body">
                 <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
+                <p style="font-size: 20px">Some quick example text to build on the card title and make up
+                    the bulk of
                     the card's content.</p>
                 <button class="btn-card">View More...</button>
             </div>
         </div>
     </div>
     <div class="food-card">
-    <div class="card custom-card">
-        <img alt="..." class="card-img" src="asset/image/beverage.png">
-        <div class="card-body">
-            <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-            <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
-                the card's content.</p>
-            <button class="btn-card">View More...</button>
+        <div class="card custom-card">
+            <img alt="..." class="card-img" src="asset/image/beverage.png">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
+                <p style="font-size: 20px">Some quick example text to build on the card title and make up
+                    the bulk of
+                    the card's content.</p>
+                <button class="btn-card">View More...</button>
+            </div>
         </div>
     </div>
-</div>
     <div class="food-card">
-    <div class="card custom-card">
-        <img alt="..." class="card-img" src="asset/image/beverage.png">
-        <div class="card-body">
-            <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-            <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk of
-                the card's content.</p>
-            <button class="btn-card">View More...</button>
+        <div class="card custom-card">
+            <img alt="..." class="card-img" src="asset/image/beverage.png">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
+                <p style="font-size: 20px">Some quick example text to build on the card title and make up
+                    the bulk of
+                    the card's content.</p>
+                <button class="btn-card">View More...</button>
+            </div>
         </div>
     </div>
-</div>
 
 
 </div>
 <!--==========================================================================================-->
-
-
 
 
 
@@ -363,6 +415,7 @@
 
 </div>
 <!--    ================================================================================-->
+
 
 
 <!--    ================================ footer =================================-->
