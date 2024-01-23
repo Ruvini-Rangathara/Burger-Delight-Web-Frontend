@@ -15,7 +15,7 @@
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet">
 
     <link href="style.css" rel="stylesheet">
-    <script src="index.js"></script>
+
 </head>
 
 <body>
@@ -63,7 +63,7 @@
 
 
 <!--    ================================= dashboard ================================-->
-<div id="home" class="content-section">
+<div id="home" class="content-section" style="padding-top: 20px">
     <div class="div-9" >
         <div class="div-10">
             <div class="column" style="margin-top: 20px">
@@ -166,7 +166,7 @@
 
 <!--===============================================================================================-->
 <div class="content-section" id="food">
-    <!--    ================================== food card ==================================-->
+    <!--    ================================== burger card ==================================-->
     <div  id="burger-card" >
     <div class="card-main" style="padding-top: 20px"><span>Burger</span></div>
     <br>
@@ -249,232 +249,258 @@
     </div>
     <!--==========================================================================================-->
 
-
-    <!--    ================================== food manage form ==================================-->
-    <div id="burger-form" class="container2">
-        <br>
-        <hr style="width: 80%; margin: auto; opacity: 50%">
-        <div class="div-17">Burger Form</div>
-        <br>
-
-        <div class="mb-3" style="width: 350px; display: flex; ">
-            <label style="color: white">Search : </label>
-            <input id="search-burger-id"
-                   placeholder="B-0001"
-                   style="margin-left:20px; padding-left:10px;  border: solid 1px #9a9292; border-radius: 5px; background: transparent; "
-                   type="text">
-        </div>
-
-        <div class="form1">
-            <div style="align-self: end; margin-right: 100px">
-                <label class="form-label" style="margin-right: 0">Burger ID : B-0001</label>
-            </div>
-            <form>
-                <div style="margin-top: 20px; display: flex; flex-direction:column; justify-content: center; align-items: center">
-                    <img alt="..." class="card-img" src="asset/image/burger2.png"
-                         style="width: 250px; height: 250px">
-                    <br>
-                    <div class="mb-3">
-                        <input class="form-control" id="burger-img" style="width: 250px; background: ghostwhite"
-                               type="file">
-                    </div>
-                </div>
-
-                <div>
-                    <div class="mb-3" style="width: 500px">
-                        <label class="form-label" for="burger-name">Burger Name :</label>
-                        <input class="form-control" id="burger-name" placeholder="Cheese Chicken Burger"
-                               style="background: ghostwhite"
-                               type="text">
-                    </div>
-
-                    <div class="mb-3" style="width: 500px">
-                        <label class="form-label" for="burger-desc">Description :</label>
-                        <textarea class="form-control" id="burger-desc" rows="3"
-                                  style="background: ghostwhite"></textarea>
-                    </div>
-
-                    <div class="mb-3" style="width: 500px">
-                        <label class="form-label" for="burger-price">Price (RS) :</label>
-                        <input class="form-control" id="burger-price" placeholder="400.00"
-                               style="background: ghostwhite"
-                               type="text">
-                    </div>
-                </div>
-
-                <div style="display: flex; justify-content: flex-end; align-items: end">
-                    <button class="btn btn-primary"
-                            style="background-color: #c05d02; border: none; padding: 5px 20px; margin-right: 10px "
-                            type="button">Save
-                    </button>
-                    <button class="btn btn-primary" style="background-color: #9a9292; border: none; padding: 5px 16px"
-                            type="button">Delete
-                    </button>
-
-                </div>
-
-            </form>
-
-        </div>
-
-    </div>
-    <!--    =================================================================================-->
-
-
     <!--    ================================== Beverage card ==================================-->
     <div  id="beverage-card" >
-    <div class="card-main"><span>Beverages</span></div>
-    <br>
-    <div class="food-container" style="width: 100%;">
-        <div class="food-card">
-            <div class="card custom-card">
-                <img alt="..." class="card-img" src="asset/image/beverage.png">
-                <div class="card-body">
-                    <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
-                        of
-                        the card's content.</p>
-                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+        <div class="card-main"><span>Beverages</span></div>
+        <br>
+        <div class="food-container" style="width: 100%;">
+            <div class="food-card">
+                <div class="card custom-card">
+                    <img alt="..." class="card-img" src="asset/image/beverage.png">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
+                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="food-card">
-            <div class="card custom-card">
-                <img alt="..." class="card-img" src="asset/image/beverage.png">
-                <div class="card-body">
-                    <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
-                        of
-                        the card's content.</p>
-                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+            <div class="food-card">
+                <div class="card custom-card">
+                    <img alt="..." class="card-img" src="asset/image/beverage.png">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
+                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="food-card">
-            <div class="card custom-card">
-                <img alt="..." class="card-img" src="asset/image/beverage.png">
-                <div class="card-body">
-                    <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
-                        of
-                        the card's content.</p>
-                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+            <div class="food-card">
+                <div class="card custom-card">
+                    <img alt="..." class="card-img" src="asset/image/beverage.png">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
+                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="food-card">
-            <div class="card custom-card">
-                <img alt="..." class="card-img" src="asset/image/beverage.png">
-                <div class="card-body">
-                    <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
-                        of
-                        the card's content.</p>
-                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+            <div class="food-card">
+                <div class="card custom-card">
+                    <img alt="..." class="card-img" src="asset/image/beverage.png">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
+                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="food-card">
-            <div class="card custom-card">
-                <img alt="..." class="card-img" src="asset/image/beverage.png">
-                <div class="card-body">
-                    <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
-                        of
-                        the card's content.</p>
-                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+            <div class="food-card">
+                <div class="card custom-card">
+                    <img alt="..." class="card-img" src="asset/image/beverage.png">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
+                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="food-card">
-            <div class="card custom-card">
-                <img alt="..." class="card-img" src="asset/image/beverage.png">
-                <div class="card-body">
-                    <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                    <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
-                        of
-                        the card's content.</p>
-                    <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+            <div class="food-card">
+                <div class="card custom-card">
+                    <img alt="..." class="card-img" src="asset/image/beverage.png">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
+                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div>
+        </div>
     </div>
     <!--==========================================================================================-->
-
-    <!--    ================================== beverage manage form ==================================-->
-    <div id="beverage-form" class="container2">
-        <br>
-        <hr style="width: 80%; margin: auto; opacity: 50%">
-        <div class="div-17">Beverage Form</div>
-        <br>
-
-        <div class="mb-3" style="width: 350px; display: flex; ">
-            <label style="color: white">Search : </label>
-            <input id="search-beverage-id"
-                   placeholder="D-0001"
-                   style="margin-left:20px; padding-left:10px;  border: solid 1px #9a9292; border-radius: 5px; background: transparent; "
-                   type="text">
-        </div>
-
-        <div class="form1">
-            <div style="align-self: end; margin-right: 100px">
-                <label class="form-label" style="margin-right: 0">Beverage ID : D-0001</label>
-            </div>
-            <form>
-                <div style="margin-top: 20px; display: flex; flex-direction:column; justify-content: center; align-items: center">
-                    <img alt="..." class="card-img" src="asset/image/beverage.png"
-                         style="width: 250px; height: 250px">
-                    <br>
-                    <div class="mb-3">
-                        <input class="form-control" id="beverage-img" style="width: 250px; background: ghostwhite"
-                               type="file">
-                    </div>
-                </div>
-
-                <div>
-                    <div class="mb-3" style="width: 500px">
-                        <label class="form-label" for="beverage-name">Beverage Name :</label>
-                        <input class="form-control" id="beverage-name" placeholder="Soft Drink"
-                               style="background: ghostwhite"
-                               type="text">
-                    </div>
-
-                    <div class="mb-3" style="width: 500px">
-                        <label class="form-label" for="beverage-desc">Description :</label>
-                        <textarea class="form-control" id="beverage-desc" rows="3"
-                                  style="background: ghostwhite"></textarea>
-                    </div>
-
-                    <div class="mb-3" style="width: 500px">
-                        <label class="form-label" for="beverage-price">Price (RS) :</label>
-                        <input class="form-control" id="beverage-price" placeholder="400.00"
-                               style="background: ghostwhite"
-                               type="text">
-                    </div>
-                </div>
-
-                <div style="display: flex; justify-content: flex-end; align-items: end">
-                    <button class="btn btn-primary"
-                            style="background-color: #c05d02; border: none; padding: 5px 20px; margin-right: 10px "
-                            type="button">Save
-                    </button>
-                    <button class="btn btn-primary" style="background-color: #9a9292; border: none; padding: 5px 16px"
-                            type="button">Delete
-                    </button>
-
-                </div>
-
-            </form>
-
-        </div>
-
-    </div>
-    <!--    =================================================================================-->
-
 </div>
 <!--===============================================================================================-->
+
+
+
+
+
+
+
+<!--    ================================== food manage form ==================================-->
+<div id="food-form" class="container2">
+    <br>
+    <hr style="width: 80%; margin: auto; opacity: 50%">
+    <div class="div-17">Food Form</div>
+    <br>
+
+    <div class="mb-3" style="width: 350px; display: flex; ">
+        <label style="color: white">Search : </label>
+        <input id="search-burger-id"
+               placeholder="F-0001"
+               style="margin-left:20px; padding-left:10px;  border: solid 1px #9a9292; border-radius: 5px; background: transparent; "
+               type="text">
+    </div>
+
+    <div class="form1">
+        <div style="align-self: end; margin-right: 100px">
+            <label class="form-label" style="margin-right: 0">Food ID : F-0001</label>
+        </div>
+        <form>
+            <div style="margin-top: 20px; display: flex; flex-direction:column; justify-content: center; align-items: center">
+                <img alt="..." class="card-img" src="asset/image/burger2.png"
+                     style="width: 250px; height: 250px">
+                <br>
+                <div class="mb-3">
+                    <input class="form-control" id="food-img" style="width: 250px; background: ghostwhite"
+                           type="file">
+                </div>
+            </div>
+
+            <div>
+                <div class="mb-3" style="width: 500px">
+                    <label class="form-label" for="food-name">Burger Name :</label>
+                    <input class="form-control" id="food-name" placeholder="Cheese Chicken Burger"
+                           style="background: ghostwhite"
+                           type="text">
+                </div>
+
+                <div class="mb-3" style="width: 500px">
+                    <label class="form-label" for="food-desc">Description :</label>
+                    <textarea class="form-control" id="food-desc" rows="3"
+                              style="background: ghostwhite"></textarea>
+                </div>
+
+                <div class="mb-3" style="width: 500px">
+                    <label class="form-label" for="food-price">Price (RS) :</label>
+                    <input class="form-control" id="food-price" placeholder="400.00"
+                           style="background: ghostwhite"
+                           type="text">
+                </div>
+            </div>
+
+            <!--                radio buttons for category, Categories are Burger and Beverage only-->
+            <div class="mb-3" style="width: 500px">
+                <label class="form-label" style="margin-right: 20px; margin-top: 3px">Category :</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="burger-category" id="burger-category-burger" value="burger" checked>
+                    <label class="form-check-label" for="burger-category-burger">Burger</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="burger-category" id="burger-category-beverage" value="beverage">
+                    <label class="form-check-label" for="burger-category-beverage">Beverage</label>
+                </div>
+            </div>
+
+
+
+            <div style="display: flex; justify-content: flex-end; align-items: end">
+                <button class="btn btn-primary"
+                        style="background-color: #c05d02; border: none; padding: 5px 20px; margin-right: 10px "
+                        type="button">Save
+                </button>
+                <button class="btn btn-primary" style="background-color: #9a9292; border: none; padding: 5px 16px"
+                        type="button">Delete
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<!--    =================================================================================-->
+
+
+<!--    ================================== customer manage form ==================================-->
+<div id="customer-form" class="container2">
+    <br>
+    <hr style="width: 80%; margin: auto; opacity: 50%">
+    <div class="div-17">Customer Form</div>
+    <br>
+
+    <div class="mb-3" style="width: 350px; display: flex; ">
+        <label style="color: white">Search : </label>
+        <input id="search-customer-id"
+               placeholder="C-0001"
+               style="margin-left:20px; padding-left:10px;  border: solid 1px #9a9292; border-radius: 5px; background: transparent; "
+               type="text">
+    </div>
+
+    <div class="form1">
+        <div style="align-self: end; margin-right: 100px">
+            <label id="customer-id-label" class="form-label" style="margin-right: 0">Customer ID : C-0001</label>
+        </div>
+        <form>
+            <div>
+                <div class="mb-3" style="width: 500px">
+                    <label class="form-label" for="customer-name">Customer Name :</label>
+                    <input class="form-control" id="customer-name" placeholder="Ex : Ruvini Rangathara"
+                           style="background: ghostwhite"
+                           type="text">
+                </div>
+
+                <div class="mb-3" style="width: 500px">
+                    <label class="form-label" for="customer-email">Customer Email :</label>
+                    <input class="form-control" id="customer-email" placeholder="Ex : ruvini925@gmail.com"
+                           style="background: ghostwhite"
+                           type="email">
+                </div>
+
+                <div class="mb-3" style="width: 500px">
+                    <label class="form-label" for="password">Password :</label>
+                    <input class="form-control" id="password" placeholder="***********"
+                           style="background: ghostwhite"
+                           type="password">
+                </div>
+
+                <div class="mb-3" style="width: 500px">
+                    <label class="form-label" for="address">Address :</label>
+                    <input class="form-control" id="address" placeholder="Panadura"
+                           style="background: ghostwhite"
+                           type="text">
+                </div>
+
+                <div class="mb-3" style="width: 500px">
+                    <label class="form-label" for="customer-contact">Contact No :</label>
+                    <input class="form-control" id="customer-contact" placeholder="Ex : 077 123 4567"
+                           style="background: ghostwhite"
+                           type="text">
+                </div>
+
+
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; align-items: end">
+                <button class="btn btn-primary"
+                        style="background-color: #c05d02; border: none; padding: 5px 20px; margin-right: 10px "
+                        type="button">Register
+                </button>
+                <button class="btn btn-primary" style="background-color: #9a9292; border: none; padding: 5px 16px"
+                        type="button">Delete
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<!--    =================================================================================-->
 
 
 
@@ -582,6 +608,9 @@
 </div>
 <!--==========================================================================================-->
 
+
+<script src="asset/jquery-3.7.0.min.js"></script>
+<script src="index.js"></script>
 
 </body>
 </html>
