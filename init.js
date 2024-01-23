@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    console.log('Document ready');
+    console.log('Document ready in init');
 
     navigateTo('home');
 
@@ -12,6 +12,7 @@ $(document).ready(function() {
     });
 
     $("#food-form, #customer-form").css('display', 'none');
+
 });
 
 function navigateTo(sectionId) {
@@ -22,5 +23,3 @@ function navigateTo(sectionId) {
     selectedSection.css('display', 'block');
 }
 
-
-///////////////////////////////////////////////// Customer Manage ////////////////////////////////////////////
