@@ -11,7 +11,7 @@ $(document).ready(function() {
         navigateTo(sectionId);
     });
 
-    $("#food-form, #customer-form").css('display', 'none');
+    $("#food-form, #customer-form").css('display', 'block');
 
 });
 
@@ -22,4 +22,5 @@ function navigateTo(sectionId) {
     var selectedSection = $('#' + sectionId);
     selectedSection.css('display', 'block');
 }
+
 

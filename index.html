@@ -358,23 +358,30 @@
 
 
 <!--    ================================== food manage form ==================================-->
-<div class="container2" id="food-form">
+<div class="container2" id="food-form" style="padding-top:20px; display: flex; flex-direction: column; justify-content: center; align-items: center ">
     <br>
     <hr style="width: 80%; margin: auto; opacity: 50%">
-    <div class="div-17">Food Form</div>
+    <div class="div-17"  style="text-align: center">Food Form</div>
     <br>
 
-    <div class="mb-3" style="width: 350px; display: flex; ">
+    <div class="mb-3" style="width: 350px; display: flex; margin: auto">
         <label style="color: white">Search : </label>
         <input id="search-burger-id"
                placeholder="F-0001"
-               style="margin-left:20px; padding-left:10px;  border: solid 1px #9a9292; border-radius: 5px; background: transparent; "
+               style="color:white; margin-left:20px; padding-left:10px;  border: solid 1px #9a9292; border-radius: 5px; background: transparent; "
                type="text">
     </div>
 
     <div class="form1">
         <div style="align-self: end; margin-right: 100px">
-            <label class="form-label" style="margin-right: 0">Food ID : F-0001</label>
+            <label>Food ID : </label>
+            <label id="food-id-label" class="form-label" style="margin-right: 0">F-0001</label>
+            <button id="food-new-button"
+                    onclick="newFood()"
+                    class="btn btn-light"
+                    style="margin-left: 10px;  border: none; padding: 5px 16px"
+                    type="button">New +
+            </button>
         </div>
         <form>
             <div style="margin-top: 20px; display: flex; flex-direction:column; justify-content: center; align-items: center">
@@ -427,10 +434,15 @@
 
             <div style="display: flex; justify-content: flex-end; align-items: end">
                 <button class="btn btn-primary"
+                        id="food-save-button"
+                        onclick="SaveFoodOnClick()"
                         style="background-color: #c05d02; border: none; padding: 5px 20px; margin-right: 10px "
                         type="button">Save
                 </button>
-                <button class="btn btn-primary" style="background-color: #9a9292; border: none; padding: 5px 16px"
+                <button class="btn btn-primary"
+                        id="food-delete-button"
+                        onclick="deleteFood()"
+                        style="background-color: #9a9292; border: none; padding: 5px 16px"
                         type="button">Delete
                 </button>
 
@@ -445,13 +457,14 @@
 
 
 <!--    ================================== customer manage form ==================================-->
-<div class="container2" id="customer-form">
-    <br>
-    <hr style="width: 80%; margin: auto; opacity: 50%">
-    <div class="div-17">Customer Form</div>
+<div class="container2" id="customer-form" style="padding-top:20px; display: flex; flex-direction: column; justify-content: center; align-items: center ">
     <br>
 
-    <div class="mb-3" style="width: 350px; display: flex; ">
+    <div class="div-17" style="text-align: center">Customer Form</div>
+    <hr style="width: 80%; margin: auto; opacity: 50%">
+    <br>
+
+    <div class="mb-3" style="width: 350px; display: flex; margin: auto">
         <label style="color: white">Search : </label>
         <input id="search-customer-id"
                placeholder="C-0001"
@@ -533,6 +546,118 @@
 
 </div>
 <!--    =================================================================================-->
+
+
+<!--    ================================== customer manage form ==================================-->
+<div class="container2" id="order-form" style="padding-top:20px; display: flex; flex-direction: column; justify-content: center; align-items: center ">
+    <br>
+
+    <div class="div-17" style="text-align: center">Order Form</div>
+    <hr style="width: 80%; margin: auto; opacity: 50%">
+    <br>
+
+    <div class="mb-3" style="width: 350px; display: flex; margin: auto">
+        <label style="color: white">Search : </label>
+        <input id="search-order-id"
+               placeholder="O-0001"
+               style="margin-left:20px; padding-left:10px;  border: solid 1px #9a9292; border-radius: 5px; background: transparent; color: white"
+               type="text">
+    </div>
+
+    <div class="form1">
+        <div style="align-self: end; margin-right: 100px">
+            <label>Customer ID : </label>
+            <label class="form-label" id="order-id-label" style="margin-right: 0">O-0001</label>
+            <button id="order-new-button"
+                    onclick="addFoodToCart()"
+                    class="btn btn-light"
+                    style="margin-left: 10px;  border: none; padding: 5px 16px"
+                    type="button">Food +
+            </button>
+
+        </div>
+        <form>
+            <div>
+
+                <div style="display: flex">
+                    <div class="mb-3" style="margin-right: 40px; width: 230px">
+                        <label class="form-label" for="order-customer-id">Customer ID :</label>
+                        <input class="form-control" id="order-customer-id" placeholder="Ex : C-0001"
+                               style="background: ghostwhite"
+                               disabled
+                               type="email">
+                    </div>
+
+                    <div class="mb-3" style="width: 230px">
+                        <label class="form-label" for="order-date">Date :</label>
+                        <input class="form-control" id="order-date" placeholder="Ex : 2024-1-12"
+                               style="background: ghostwhite"
+                               disabled
+                               type="text">
+                    </div>
+                </div>
+
+
+                <table class="table" id="order-table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Food</th>
+                        <th scope="col">Unit Price</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Burger</td>
+                        <td>RS : 600.00</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Soft Drinks</td>
+                        <td>RS : 270.00</td>
+                        <td>1</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+                <div class="mb-3" style="margin-left:270px; width: 230px; align-self: end">
+                    <label class="form-label" for="total">Total : RS </label>
+                    <input class="form-control" id="total" placeholder="Ex : 1470.00"
+                           style="background: ghostwhite"
+                           type="text">
+                </div>
+
+
+
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; align-items: end">
+                <button id="order-save-button"
+                        onclick="saveOrder()"
+                        class="btn btn-primary"
+                        style="background-color: #c05d02; border: none; padding: 5px 20px; margin-right: 10px "
+                        type="button">Place Order
+                </button>
+                <button id="order-delete-button"
+                        onclick="deleteOrder()"
+                        class="btn btn-primary"
+                        style="background-color: #9a9292; border: none; padding: 5px 16px"
+                        type="button">Delete
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<!--    =================================================================================-->
+
 
 
 <!--    ================================== contact form ================================-->
@@ -636,7 +761,7 @@
           </span>
         </span>
       </div>
-        <hr style="width: 100%; margin: auto; opacity: 50%; margin-top: 40px">
+<!--        <hr style="width: 100%; opacity: 50%; margin-top: 40px">-->
       <div class="div-42">
         Copyright c 2023 Burger Delight | Built by Ruvini Rangathara
       </div>

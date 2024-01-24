@@ -42,8 +42,6 @@ function searchCustomer(customerId) {
         type: 'GET',
         dataType: 'json',
         success: function(response) {
-            console.log("response code : ",response.code)
-
             if (response.code === '00') {
                 var customerDTO = response.content;
                 console.log('Customer retrieved successfully:', customerDTO);

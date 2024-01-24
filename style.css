@@ -730,12 +730,17 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     width: 50%;
     background-color: #171717;
     color: white;
     border-radius: 15px;
     padding: 20px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .form-field{
@@ -743,18 +748,4 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.container2{
-    border: solid 1px white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    /*top: 0;*/
-    /*right: 0;*/
-    /*left: 0;*/
-    /*bottom: 0;*/
-    /*margin: auto;*/
 }
