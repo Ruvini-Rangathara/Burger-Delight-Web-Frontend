@@ -26,9 +26,10 @@ function login() {
         contentType: 'application/json',
         success: function(response) {
             if (response.code === '00') {
-                if (response.content === true) {
+                if (response.content > 0) {
                     // Customer allowed to login
                     console.log('Login successful');
+                    localStorage.setItem('customerId',response.content );
                     window.location.href = 'dashboard.html';
                 } else {
                     // Customer not allowed to login

@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+    console.log("customer id : ", localStorage.getItem('customerId'));
+
     console.log('Document ready in init');
 
     navigateTo('home');
@@ -11,7 +14,7 @@ $(document).ready(function() {
         navigateTo(sectionId);
     });
 
-    $("#food-form, #customer-form, #order-form").css('display', 'none');
+    $("#food-form, #customer-form, #order-form, #my-orders-table-div").css('display', 'none');
 
 });
 

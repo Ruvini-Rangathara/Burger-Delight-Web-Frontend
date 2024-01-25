@@ -257,6 +257,11 @@ function createDynamicFoodCard(foodData) {
     addToCartButton.className = "btn-card";
     addToCartButton.type = "button";
     addToCartButton.textContent = "Add To Cart";
+    //add onclick event to this button to add food to cart
+    addToCartButton.addEventListener("click", function () {
+        addToCart(foodData.id); // Pass foodId to addToCart function
+    });
+
 
     // Add event listener for Add to Cart button
     addToCartButton.addEventListener("click", function () {
@@ -372,3 +377,34 @@ function showFoodForm() {
 function closeFoodForm() {
     $('#food-form').hide();
 }
+
+
+function addToCart(foodId) {
+    console.log('Add to cart food ID:', foodId)
+
+    // Fetch additional details like price and food name using AJAX
+    $.ajax({
+        url: 'http://localhost:8080/api/v1/food/get/' + foodId,
+        type: 'GET',
+        contentType: 'application/json',
+        success: function (response) {
+            if (response.code === '00') {
+                var data = {
+                    foodId: foodId,
+                    foodPrice: response.content.price,
+                    foodName: response.content.name,
+                    quantity: 1
+                };
+
+                addToCartTable(data);
+            } else {
+                console.log('Error adding food:', response.message);
+                alert(response.message);
+            }
+        },
+        error: function (error) {
+            console.error('Error adding food:', error);
+        }
+    });
+}
+

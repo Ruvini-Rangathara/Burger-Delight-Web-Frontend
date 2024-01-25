@@ -69,6 +69,7 @@ function searchCustomer(customerId) {
     });
 }
 
+
 // ================================== save/update customer ==================================
 function RegisterCustomerOnClick() {
 

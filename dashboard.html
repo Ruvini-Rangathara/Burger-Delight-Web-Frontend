@@ -39,7 +39,7 @@
                         <a class="nav-item" href="#" onclick="navigateTo('home')">Home</a>
                         <a class="nav-item" href="#" onclick="navigateTo('food')">Food</a>
                         <a class="nav-item" href="#" onclick="navigateTo('contact')">Contact Us</a>
-                        <a class="nav-item" href="#" onclick="navigateTo('order-form')">My Orders</a>
+                        <a class="nav-item" href="#" onclick="navigateTo('my-orders-table-div')">My Orders</a>
                     </nav>
                         <a class="nav-item" href="#" onclick="navigateTo('order-form')">
                                   <img
@@ -313,7 +313,7 @@
 
 
 <!--    ================================== customer manage form ==================================-->
-<div class="container2" id="customer-form" style="padding-top:20px; display: flex; flex-direction: column; justify-content: center; align-items: center ">
+<div class="container2 content-section" id="customer-form" style="padding-top:20px; display: flex; flex-direction: column; justify-content: center; align-items: center ">
     <br>
 
     <div class="div-17" style="text-align: center">Customer Form</div>
@@ -428,15 +428,8 @@
 
     <div class="form1">
         <div style="align-self: end; margin-right: 100px">
-            <label>Customer ID : </label>
+            <label>Order ID : </label>
             <label class="form-label" id="order-id-label" style="margin-right: 0">O-0001</label>
-            <button id="order-new-button"
-                    onclick="addFoodToCart()"
-                    class="btn btn-light"
-                    style="margin-left: 10px;  border: none; padding: 5px 16px"
-                    type="button">Food +
-            </button>
-
         </div>
         <form>
             <div>
@@ -445,8 +438,7 @@
                     <div class="mb-3" style="margin-right: 40px; width: 230px">
                         <label class="form-label" for="order-customer-id">Customer ID :</label>
                         <input class="form-control" id="order-customer-id" placeholder="Ex : C-0001"
-                               style="background: ghostwhite"
-                               disabled
+                               style="background: ghostwhite; color: black"
                                type="email">
                     </div>
 
@@ -467,28 +459,23 @@
                         <th scope="col">Food</th>
                         <th scope="col">Unit Price</th>
                         <th scope="col">Quantity</th>
+                        <th scope="col">Option</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Burger</td>
-                        <td>RS : 600.00</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Soft Drinks</td>
-                        <td>RS : 270.00</td>
-                        <td>1</td>
-                    </tr>
-                    </tbody>
+
+
+
+<!--                    ====================================-->
+
                 </table>
+
+
 
 
                 <div class="mb-3" style="margin-left:270px; width: 230px; align-self: end">
                     <label class="form-label" for="total">Total : RS </label>
-                    <input class="form-control" id="total" placeholder="Ex : 1470.00"
+                    <input class="form-control" id="total" placeholder="Ex : 0.00"
                            style="background: ghostwhite"
                            type="text">
                 </div>
@@ -498,20 +485,29 @@
             </div>
 
             <div style="display: flex; justify-content: flex-end; align-items: end">
-                <button id="order-save-button"
-                        onclick="saveOrder()"
+                <button id="cart-save-button"
                         class="btn btn-primary"
-                        style="background-color: #c05d02; border: none; padding: 5px 20px; margin-right: 10px "
-                        type="button">Place Order
+                        onclick="saveCart()"
+                        style="background-color: yellowgreen; border: none; padding: 5px 20px; margin-right: 10px "
+                        type="button">
+                    Save Cart
                 </button>
                 <button id="order-delete-button"
-                        onclick="deleteOrder()"
+                        onclick="deleteCart()"
                         class="btn btn-primary"
                         style="background-color: #9a9292; border: none; padding: 5px 16px"
                         type="button">Delete
                 </button>
 
             </div>
+
+            <button id="place-order-button"
+                    class="btn btn-primary"
+                    onclick="placeOrder()"
+                    style="align-self:center; background-color: #c05d02; border: none; padding: 5px 20px; margin-right: 10px "
+                    type="button">
+                Place Order
+            </button>
 
         </form>
 
@@ -522,8 +518,41 @@
 
 
 
+
+
+<!--======================================= my orders table ======================================================-->
+
+<div class="container2 .content-section" id="my-orders-table-div" style="padding-top:20px; display: flex; flex-direction: column; justify-content: center; align-items: center ">
+    <br>
+    <hr style="width: 80%; margin: auto; opacity: 50%">
+    <div class="div-17"  style="text-align: center">My Orders</div>
+    <br>
+
+    <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center; height: 80vh">
+        <table style="width: 50%" class="table" id="my-orders-table">
+            <thead>
+            <tr>
+                <th scope="col">#Order Id</th>
+                <th scope="col">#Customer Id</th>
+                <th scope="col">Date</th>
+                <th scope="col">Total</th>
+            </tr>
+            </thead>
+            <tbody>
+
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!--=============================================================================================-->
+
+
 <!--    ================================== contact form ================================-->
-<div class="container2 content-section" id="contact">
+<div class="container2 content-section" id="contact" style="padding-top: 20px">
     <div class="card-main" style="padding-top: 20px"><span>Contact Us</span></div>
     <br>
     <hr style="width: 80%; margin: auto; opacity: 50%">
@@ -636,6 +665,7 @@
 <script src="js/customer.js"></script>
 <script src="js/init.js"></script>
 <script src="js/food.js"></script>
+<script src="js/order.js"></script>
 
 </body>
 </html>
