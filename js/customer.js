@@ -216,3 +216,48 @@ function logout() {
     window.location.href = "index.html";
 }
 
+
+// ================================== send mail from customer via contact ==================================
+function sendContactMail() {
+    var email = $('#customerMailEmail').val();
+    var subject = $('#customerMailName').val();
+    var message = $('#customerMailMessage').val();
+
+    var mail = {
+        to: email,
+        subject: subject,
+        body: message
+    };
+
+    console.log('Mail:', mail)
+
+    $.ajax({
+        url: 'http://localhost:8080/api/v1/mail/send',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(mail),
+        success: function(response) {
+            if (response === '00') {
+                var confirmation1 = confirm('Mail sent successfully');
+                if (confirmation1) {
+                    setDefaultMailDetails();
+                }
+            } else {
+                var confirmation2 = confirm('Failed to send mail!');
+                if (confirmation2) {
+                    setDefaultMailDetails();
+                }
+            }
+        },
+        error: function(error) {
+            console.error('Error:', error);
+        }
+    });
+}
+
+function setDefaultMailDetails() {
+    $('#customerMailEmail').val('');
+    $('#customerMailName').val('');
+    $('#customerMailMessage').val('');
+}
+
