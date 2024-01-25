@@ -2,778 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Burger Delight</title>
+
+    <script src="https://kit.fontawesome.com/35c4f0c859.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&family=Sofia+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
-        ::-webkit-scrollbar {
-            width: 0px;
-            background: transparent;
+        body{
+            padding-top: 25px;
+            /*background-image: url('assert/image/bg3.png');*/
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            backdrop-filter: blur(6px); overflow: hidden;
+        }
+
+        #user_p_div{
+            margin-bottom: 10px;
+        }
+
+        input[type=text], input[type=password]{
+            font-size: 15px;
+            height: 25px !important;
+        }
+
+        #sign_in_section button{
+            height: 30px;!important;
         }
 
     </style>
-
-    <link href="https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap" rel="stylesheet">
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet">
-
-    <link href="style.css" rel="stylesheet">
 
 
 </head>
 
 <body>
 
+<section class="position-relative py-4 py-xl-5" style="margin-top: 30px" id="sign_in_section">
+    <div class="container">
+        <div id="user_p_div">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h4 id="welcome_header">Welcome To Burger Delight!</h4>
 
-<!--    =================================== header =================================-->
-<div style="position: fixed; width: 100%; z-index: 10000; top: 0;">
-    <div class="div-2">
-                <span class="span">
-                    <img
-                            class="img"
-                            loading="lazy"
-                            srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/42d5345b1a8af8514d773dde84431ffa7c34f596adf3dbb03e2e9baa8fa325db?apiKey=1e1d1af84687413c90642ed83011e3eb&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/42d5345b1a8af8514d773dde84431ffa7c34f596adf3dbb03e2e9baa8fa325db?apiKey=1e1d1af84687413c90642ed83011e3eb&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/42d5345b1a8af8514d773dde84431ffa7c34f596adf3dbb03e2e9baa8fa325db?apiKey=1e1d1af84687413c90642ed83011e3eb&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/42d5345b1a8af8514d773dde84431ffa7c34f596adf3dbb03e2e9baa8fa325db?apiKey=1e1d1af84687413c90642ed83011e3eb&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/42d5345b1a8af8514d773dde84431ffa7c34f596adf3dbb03e2e9baa8fa325db?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/42d5345b1a8af8514d773dde84431ffa7c34f596adf3dbb03e2e9baa8fa325db?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/42d5345b1a8af8514d773dde84431ffa7c34f596adf3dbb03e2e9baa8fa325db?apiKey=1e1d1af84687413c90642ed83011e3eb&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/42d5345b1a8af8514d773dde84431ffa7c34f596adf3dbb03e2e9baa8fa325db?apiKey=1e1d1af84687413c90642ed83011e3eb&"
-                    />
-             <div class="div-3" style="margin-right: 750px">Burger Delight</div>
+                <p style="color: #055160" class="w-lg-50">&quot;Burger Delight's website login page is a
+                    secure portal for customers and staff. Users enter a username and password
+                    to access personalized features.&quot;</p>
 
-                    <span class="span-2">
-                    <nav>
-                        <a class="nav-item" href="#" onclick="navigateTo('home')">Home</a>
-                        <a class="nav-item" href="#" onclick="navigateTo('food')">Food</a>
-                        <a class="nav-item" href="#" onclick="navigateTo('contact')">Contact Us</a>
-                        <a class="nav-item" href="#" onclick="navigateTo('section3')">FeedBack</a>
-                        <a class="nav-item" href="#" onclick="navigateTo('section3')">My Orders</a>
-                    </nav>
-                        <a class="nav-item" href="#" onclick="navigateTo('cart')">
-                                  <img
-                                          class="img-2"
-                                          loading="lazy"
-                                          srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/b5cd8e68da5052f27eaa5ea902962e9eaa6d4bb65c31ff42c2d06fef532d3824?apiKey=1e1d1af84687413c90642ed83011e3eb&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5cd8e68da5052f27eaa5ea902962e9eaa6d4bb65c31ff42c2d06fef532d3824?apiKey=1e1d1af84687413c90642ed83011e3eb&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5cd8e68da5052f27eaa5ea902962e9eaa6d4bb65c31ff42c2d06fef532d3824?apiKey=1e1d1af84687413c90642ed83011e3eb&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5cd8e68da5052f27eaa5ea902962e9eaa6d4bb65c31ff42c2d06fef532d3824?apiKey=1e1d1af84687413c90642ed83011e3eb&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5cd8e68da5052f27eaa5ea902962e9eaa6d4bb65c31ff42c2d06fef532d3824?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5cd8e68da5052f27eaa5ea902962e9eaa6d4bb65c31ff42c2d06fef532d3824?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5cd8e68da5052f27eaa5ea902962e9eaa6d4bb65c31ff42c2d06fef532d3824?apiKey=1e1d1af84687413c90642ed83011e3eb&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5cd8e68da5052f27eaa5ea902962e9eaa6d4bb65c31ff42c2d06fef532d3824?apiKey=1e1d1af84687413c90642ed83011e3eb&"
-                                  />
-                        </a>
-                        <a class="nav-item" href="#" onclick="navigateTo('customer-form')">
-                                  <img
-                                          class="img-3"
-                                          loading="lazy"
-                                          srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/0544627a060993e386acc3202432bb0ef09daa78ba32cdb823c741c144bc5bee?apiKey=1e1d1af84687413c90642ed83011e3eb&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/0544627a060993e386acc3202432bb0ef09daa78ba32cdb823c741c144bc5bee?apiKey=1e1d1af84687413c90642ed83011e3eb&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/0544627a060993e386acc3202432bb0ef09daa78ba32cdb823c741c144bc5bee?apiKey=1e1d1af84687413c90642ed83011e3eb&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/0544627a060993e386acc3202432bb0ef09daa78ba32cdb823c741c144bc5bee?apiKey=1e1d1af84687413c90642ed83011e3eb&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/0544627a060993e386acc3202432bb0ef09daa78ba32cdb823c741c144bc5bee?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/0544627a060993e386acc3202432bb0ef09daa78ba32cdb823c741c144bc5bee?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/0544627a060993e386acc3202432bb0ef09daa78ba32cdb823c741c144bc5bee?apiKey=1e1d1af84687413c90642ed83011e3eb&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/0544627a060993e386acc3202432bb0ef09daa78ba32cdb823c741c144bc5bee?apiKey=1e1d1af84687413c90642ed83011e3eb&"
-                                  />
-                        </a>
-
-    </span>
-
-    </span>
-
-    </div>
-</div>
-<!--=====================================================================================-->
-
-
-<!--    ================================= dashboard ================================-->
-<div class="content-section" id="home" style="padding-top: 20px">
-    <div class="div-9">
-        <div class="div-10">
-            <div class="column" style="margin-top: 20px">
-                <img
-                        class="img-4"
-                        loading="lazy"
-                        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/3dad661ec31ea7f3ded8a1931632d1be030cee45c5956b2c250d96fe0ba442a7?apiKey=1e1d1af84687413c90642ed83011e3eb&"
-                />
             </div>
-            <div class="column-2">
-        <span class="span-3" style="padding-top: 100px">
-          <div class="div-11"
-               style="display: flex; flex-direction: column; justify-content:center; align-items: center">
-              <div style="font-size: 50px; color: white; font-family: 'Atomic Age', cursive;">Burger Delight</div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6 col-xl-4">
+                <div class="card mb-5">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <div class="bs-icon-xl bs-icon-circle bs-icon-primary bs-icon my-4"  id="user_person_svg_div">
+                            <h2>Log In</h2>
+                        </div>
+                        <form class="text-center" method="post">
+                            <div class="mb-3"><input class="form-control" type="text" name="login-email" placeholder="Email" id="login-email"/></div>
+                            <div class="mb-3"><input class="form-control" type="password" name="login-password" placeholder="Password" id="login-password"/></div>
+                            <div class="mb-3">
+                                <button
+                                        onclick="login()"
+                                        type="button"
+                                        class="d-block w-100"
+                                        style="background-color: #c05d02;
+                                        color: white; border: none; text-align: center; border-radius: 7px"
+                                        id="btn_login">Login
+                                </button>
+                            </div>
 
-              <br>
-            Don't miss out on burger perfection – order now and experience the
-            magic of perfectly seasoned patties at Burger Delight.
-          </div>
-          <div class="div-12">
-            <span class="span-4">About Us</span>
-            <span class="span-5">Contact Us</span>
-          </div>
-        </span>
+                            <a class="text-muted">Forgot your password?</a><br>
+                            <a href="signup.html" class="text-muted">Sign Up</a>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <span class="span-6" style="align-items: end; display: flex; height: 650px;">
-        <div class="div-15" style="padding-left: 200px; width: 1100px">
-            <span style="font-weight: 600; font-size: 35px">
-              Welcome to Burger Delight
-            </span>
-            <br/>
-            <br/>
-            <span style="color: rgba(255, 255, 255, 1)">
-              At Burger Delight, we believe in serving the most delicious,
-              mouthwatering burgers crafted with love and passion. Our journey
-              began with a simple idea: to create burgers that are not only
-              tasty but also made with the freshest ingredients available.
-            </span>
-            <br/>
-            <br/>
-            <br/>
+</section>
 
-            <span style="font-weight: 500; color: rgba(255, 255, 255, 1)">
-              Contact Us
-            </span>
-            <br/>
-            <br/>
-            <span style="color: rgba(255, 255, 255, 1)">
-              We would love to hear from you! If you have any questions,
-              feedback, or special requests, feel free to reach out to us using
-              the contact information below:
-            </span>
-            <br/>
-            <br/>
-            <span style="color: rgba(255, 255, 255, 1)">
-              Phone: (555) 555-5555
-            </span>
-            <br/>
-            <span style="color: rgba(255, 255, 255, 1)">
-              Email: info@burgerdelight.com
-            </span>
-            <br/>
-            <span style="color: rgba(255, 255, 255, 1)">
-              Address: 123 Main Street, City, State, Zip Code
-            </span>
-            <br/>
-            <br/>
-          </div>
-        <div class="column-4" style="height: 650px; width: 500px; margin-left: 200px">
-          <img
-                  class="img-5"
-                  loading="lazy"
-                  srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/22845241bbe0c7fbbdcb86bbbf13039da041beac456e506b20bdf01c131ed1b9?apiKey=1e1d1af84687413c90642ed83011e3eb&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/22845241bbe0c7fbbdcb86bbbf13039da041beac456e506b20bdf01c131ed1b9?apiKey=1e1d1af84687413c90642ed83011e3eb&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/22845241bbe0c7fbbdcb86bbbf13039da041beac456e506b20bdf01c131ed1b9?apiKey=1e1d1af84687413c90642ed83011e3eb&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/22845241bbe0c7fbbdcb86bbbf13039da041beac456e506b20bdf01c131ed1b9?apiKey=1e1d1af84687413c90642ed83011e3eb&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/22845241bbe0c7fbbdcb86bbbf13039da041beac456e506b20bdf01c131ed1b9?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/22845241bbe0c7fbbdcb86bbbf13039da041beac456e506b20bdf01c131ed1b9?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/22845241bbe0c7fbbdcb86bbbf13039da041beac456e506b20bdf01c131ed1b9?apiKey=1e1d1af84687413c90642ed83011e3eb&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/22845241bbe0c7fbbdcb86bbbf13039da041beac456e506b20bdf01c131ed1b9?apiKey=1e1d1af84687413c90642ed83011e3eb&"
-          />
-        </div>
-  </span>
-
-
-    <div
-            style="text-align: center; color: white; margin:auto; background-color: #0C0C0C; padding: 30px 250px">
-        <span style="font-size: 25px; text-align: center">
-            Visit Us Today
-        </span>
-
-        <br/>
-        <br/>
-        We invite you to come and experience the joy of Burger Delight. Whether
-        you're dining in with friends and family or ordering takeout, we promise
-        to deliver exceptional flavors and exceptional service. Join us today and
-        embark on a burger journey like no other!
-    </div>
-</div>
-<!--    =======================================================================================-->
-
-
-
-
-
-
-
-
-
-
-
-
-<!--===============================================================================================-->
-<div class="content-section" id="food">
-    <!--    ================================== burger card ==================================-->
-    <div id="burger-card">
-        <div class="card-main" style="padding-top: 20px"><span>Burger</span></div>
-        <br>
-        <div class="food-container" style="width: 100%;">
-            <div class="food-card">
-                <div class="card custom-card">
-                    <img alt="..." class="card-img" src="asset/image/burger2.png">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the
-                            bulk
-                            of
-                            the card's content.</p>
-                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="food-card">
-                <div class="card custom-card">
-                    <img alt="..." class="card-img" src="asset/image/burger2.png">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the
-                            bulk
-                            of
-                            the card's content.</p>
-                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="food-card">
-                <div class="card custom-card">
-                    <img alt="..." class="card-img" src="asset/image/burger2.png">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the
-                            bulk
-                            of
-                            the card's content.</p>
-                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="food-card">
-                <div class="card custom-card">
-                    <img alt="..." class="card-img" src="asset/image/burger2.png">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the
-                            bulk
-                            of
-                            the card's content.</p>
-                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="food-card">
-                <div class="card custom-card">
-                    <img alt="..." class="card-img" src="asset/image/burger2.png">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the
-                            bulk
-                            of
-                            the card's content.</p>
-                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="food-card">
-                <div class="card custom-card">
-                    <img alt="..." class="card-img" src="asset/image/burger2.png">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px">Cheese Chicken Burger</h5>
-                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the
-                            bulk
-                            of
-                            the card's content.</p>
-                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-    <!--==========================================================================================-->
-
-    <!--    ================================== Beverage card ==================================-->
-    <div id="beverage-card">
-        <div class="card-main"><span>Beverages</span></div>
-        <br>
-        <div class="food-container" style="width: 100%;">
-            <div class="food-card">
-                <div class="card custom-card">
-                    <img alt="..." class="card-img" src="asset/image/beverage.png">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the
-                            bulk
-                            of
-                            the card's content.</p>
-                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="food-card">
-                <div class="card custom-card">
-                    <img alt="..." class="card-img" src="asset/image/beverage.png">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the
-                            bulk
-                            of
-                            the card's content.</p>
-                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="food-card">
-                <div class="card custom-card">
-                    <img alt="..." class="card-img" src="asset/image/beverage.png">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the
-                            bulk
-                            of
-                            the card's content.</p>
-                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="food-card">
-                <div class="card custom-card">
-                    <img alt="..." class="card-img" src="asset/image/beverage.png">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the
-                            bulk
-                            of
-                            the card's content.</p>
-                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="food-card">
-                <div class="card custom-card">
-                    <img alt="..." class="card-img" src="asset/image/beverage.png">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the
-                            bulk
-                            of
-                            the card's content.</p>
-                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="food-card">
-                <div class="card custom-card">
-                    <img alt="..." class="card-img" src="asset/image/beverage.png">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px">Soft Drinks</h5>
-                        <p style="font-size: 20px">Some quick example text to build on the card title and make up the
-                            bulk
-                            of
-                            the card's content.</p>
-                        <button class="btn-card" style="border-radius: 5px; padding: 0 10px">Add To Cart</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!--==========================================================================================-->
-</div>
-<!--===============================================================================================-->
-
-
-<!--    ================================== food manage form ==================================-->
-<div class="container2" id="food-form" style="padding-top:20px; display: flex; flex-direction: column; justify-content: center; align-items: center ">
-    <br>
-    <hr style="width: 80%; margin: auto; opacity: 50%">
-    <div class="div-17"  style="text-align: center">Food Form</div>
-    <br>
-
-    <div class="mb-3" style="width: 350px; display: flex; margin: auto">
-        <label style="color: white">Search : </label>
-        <input id="search-burger-id"
-               placeholder="F-0001"
-               style="color:white; margin-left:20px; padding-left:10px;  border: solid 1px #9a9292; border-radius: 5px; background: transparent; "
-               type="text">
-    </div>
-
-    <div class="form1">
-        <div style="align-self: end; margin-right: 100px">
-            <label>Food ID : </label>
-            <label id="food-id-label" class="form-label" style="margin-right: 0">F-0001</label>
-            <button id="food-new-button"
-                    onclick="newFood()"
-                    class="btn btn-light"
-                    style="margin-left: 10px;  border: none; padding: 5px 16px"
-                    type="button">New +
-            </button>
-        </div>
-        <form>
-            <div style="margin-top: 20px; display: flex; flex-direction:column; justify-content: center; align-items: center">
-                <img alt="..." class="card-img" src="asset/image/burger2.png"
-                     style="width: 250px; height: 250px">
-                <br>
-                <div class="mb-3">
-                    <input class="form-control" id="food-img" style="width: 250px; background: ghostwhite"
-                           type="file">
-                </div>
-            </div>
-
-            <div>
-                <div class="mb-3" style="width: 500px">
-                    <label class="form-label" for="food-name">Burger Name :</label>
-                    <input class="form-control" id="food-name" placeholder="Cheese Chicken Burger"
-                           style="background: ghostwhite"
-                           type="text">
-                </div>
-
-                <div class="mb-3" style="width: 500px">
-                    <label class="form-label" for="food-desc">Description :</label>
-                    <textarea class="form-control" id="food-desc" rows="3"
-                              style="background: ghostwhite"></textarea>
-                </div>
-
-                <div class="mb-3" style="width: 500px">
-                    <label class="form-label" for="food-price">Price (RS) :</label>
-                    <input class="form-control" id="food-price" placeholder="400.00"
-                           style="background: ghostwhite"
-                           type="text">
-                </div>
-            </div>
-
-            <!--                radio buttons for category, Categories are Burger and Beverage only-->
-            <div class="mb-3" style="width: 500px">
-                <label class="form-label" style="margin-right: 20px; margin-top: 3px">Category :</label>
-                <div class="form-check form-check-inline">
-                    <input checked class="form-check-input" id="burger-category-burger" name="burger-category"
-                           type="radio" value="burger">
-                    <label class="form-check-label" for="burger-category-burger">Burger</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" id="burger-category-beverage" name="burger-category" type="radio"
-                           value="beverage">
-                    <label class="form-check-label" for="burger-category-beverage">Beverage</label>
-                </div>
-            </div>
-
-
-            <div style="display: flex; justify-content: flex-end; align-items: end">
-                <button class="btn btn-primary"
-                        id="food-save-button"
-                        onclick="SaveFoodOnClick()"
-                        style="background-color: #c05d02; border: none; padding: 5px 20px; margin-right: 10px "
-                        type="button">Save
-                </button>
-                <button class="btn btn-primary"
-                        id="food-delete-button"
-                        onclick="deleteFood()"
-                        style="background-color: #9a9292; border: none; padding: 5px 16px"
-                        type="button">Delete
-                </button>
-
-            </div>
-
-        </form>
-
-    </div>
-
-</div>
-<!--    =================================================================================-->
-
-
-<!--    ================================== customer manage form ==================================-->
-<div class="container2" id="customer-form" style="padding-top:20px; display: flex; flex-direction: column; justify-content: center; align-items: center ">
-    <br>
-
-    <div class="div-17" style="text-align: center">Customer Form</div>
-    <hr style="width: 80%; margin: auto; opacity: 50%">
-    <br>
-
-    <div class="mb-3" style="width: 350px; display: flex; margin: auto">
-        <label style="color: white">Search : </label>
-        <input id="search-customer-id"
-               placeholder="C-0001"
-               style="margin-left:20px; padding-left:10px;  border: solid 1px #9a9292; border-radius: 5px; background: transparent; color: white"
-               type="text">
-    </div>
-
-    <div class="form1">
-        <div style="align-self: end; margin-right: 100px">
-            <label>Customer ID : </label>
-            <label class="form-label" id="customer-id-label" style="margin-right: 0">C-0001</label>
-            <button id="customer-new-button"
-                    onclick="newCustomer()"
-                    class="btn btn-light"
-                    style="margin-left: 10px;  border: none; padding: 5px 16px"
-                    type="button">New +
-            </button>
-
-        </div>
-        <form>
-            <div>
-                <div class="mb-3" style="width: 500px">
-                    <label class="form-label" for="customer-name">Customer Name :</label>
-                    <input class="form-control" id="customer-name" placeholder="Ex : Ruvini Rangathara"
-                           style="background: ghostwhite"
-                           type="text">
-                </div>
-
-                <div class="mb-3" style="width: 500px">
-                    <label class="form-label" for="customer-email">Customer Email :</label>
-                    <input class="form-control" id="customer-email" placeholder="Ex : ruvini925@gmail.com"
-                           style="background: ghostwhite"
-                           type="email">
-                </div>
-
-                <div class="mb-3" style="width: 500px">
-                    <label class="form-label" for="customer-password">Password :</label>
-                    <input class="form-control" id="customer-password" placeholder="***********"
-                           style="background: ghostwhite"
-                           type="password">
-                </div>
-
-                <div class="mb-3" style="width: 500px">
-                    <label class="form-label" for="address">Address :</label>
-                    <input class="form-control" id="address" placeholder="Panadura"
-                           style="background: ghostwhite"
-                           type="text">
-                </div>
-
-                <div class="mb-3" style="width: 500px">
-                    <label class="form-label" for="customer-contact">Contact No :</label>
-                    <input class="form-control" id="customer-contact" placeholder="Ex : 077 123 4567"
-                           style="background: ghostwhite"
-                           type="text">
-                </div>
-
-
-            </div>
-
-            <div style="display: flex; justify-content: flex-end; align-items: end">
-                <button id="customer-save-button"
-                        onclick="RegisterCustomerOnClick()"
-                        class="btn btn-primary"
-                        style="background-color: #c05d02; border: none; padding: 5px 20px; margin-right: 10px "
-                        type="button">Register
-                </button>
-                <button id="customer-delete-button"
-                        onclick="deleteCustomer()"
-                        class="btn btn-primary"
-                        style="background-color: #9a9292; border: none; padding: 5px 16px"
-                        type="button">Delete
-                </button>
-
-            </div>
-
-        </form>
-
-    </div>
-
-</div>
-<!--    =================================================================================-->
-
-
-<!--    ================================== customer manage form ==================================-->
-<div class="container2" id="order-form" style="padding-top:20px; display: flex; flex-direction: column; justify-content: center; align-items: center ">
-    <br>
-
-    <div class="div-17" style="text-align: center">Order Form</div>
-    <hr style="width: 80%; margin: auto; opacity: 50%">
-    <br>
-
-    <div class="mb-3" style="width: 350px; display: flex; margin: auto">
-        <label style="color: white">Search : </label>
-        <input id="search-order-id"
-               placeholder="O-0001"
-               style="margin-left:20px; padding-left:10px;  border: solid 1px #9a9292; border-radius: 5px; background: transparent; color: white"
-               type="text">
-    </div>
-
-    <div class="form1">
-        <div style="align-self: end; margin-right: 100px">
-            <label>Customer ID : </label>
-            <label class="form-label" id="order-id-label" style="margin-right: 0">O-0001</label>
-            <button id="order-new-button"
-                    onclick="addFoodToCart()"
-                    class="btn btn-light"
-                    style="margin-left: 10px;  border: none; padding: 5px 16px"
-                    type="button">Food +
-            </button>
-
-        </div>
-        <form>
-            <div>
-
-                <div style="display: flex">
-                    <div class="mb-3" style="margin-right: 40px; width: 230px">
-                        <label class="form-label" for="order-customer-id">Customer ID :</label>
-                        <input class="form-control" id="order-customer-id" placeholder="Ex : C-0001"
-                               style="background: ghostwhite"
-                               disabled
-                               type="email">
-                    </div>
-
-                    <div class="mb-3" style="width: 230px">
-                        <label class="form-label" for="order-date">Date :</label>
-                        <input class="form-control" id="order-date" placeholder="Ex : 2024-1-12"
-                               style="background: ghostwhite"
-                               disabled
-                               type="text">
-                    </div>
-                </div>
-
-
-                <table class="table" id="order-table">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Food</th>
-                        <th scope="col">Unit Price</th>
-                        <th scope="col">Quantity</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Burger</td>
-                        <td>RS : 600.00</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Soft Drinks</td>
-                        <td>RS : 270.00</td>
-                        <td>1</td>
-                    </tr>
-                    </tbody>
-                </table>
-
-
-                <div class="mb-3" style="margin-left:270px; width: 230px; align-self: end">
-                    <label class="form-label" for="total">Total : RS </label>
-                    <input class="form-control" id="total" placeholder="Ex : 1470.00"
-                           style="background: ghostwhite"
-                           type="text">
-                </div>
-
-
-
-            </div>
-
-            <div style="display: flex; justify-content: flex-end; align-items: end">
-                <button id="order-save-button"
-                        onclick="saveOrder()"
-                        class="btn btn-primary"
-                        style="background-color: #c05d02; border: none; padding: 5px 20px; margin-right: 10px "
-                        type="button">Place Order
-                </button>
-                <button id="order-delete-button"
-                        onclick="deleteOrder()"
-                        class="btn btn-primary"
-                        style="background-color: #9a9292; border: none; padding: 5px 16px"
-                        type="button">Delete
-                </button>
-
-            </div>
-
-        </form>
-
-    </div>
-
-</div>
-<!--    =================================================================================-->
-
-
-
-<!--    ================================== contact form ================================-->
-<div class="container2 content-section" id="contact">
-    <div class="card-main" style="padding-top: 20px"><span>Contact Us</span></div>
-    <br>
-    <hr style="width: 80%; margin: auto; opacity: 50%">
-
-    <div class="container" style="width: 100%; margin: auto">
-        <div class="div-19">
-            <div class="div-20">
-                <div class="column-5">
-          <span class="span-7">
-            <img
-                    class="img-6"
-                    loading="lazy"
-                    srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/1d2b7655353368ee015d1218868fd17b211992e57048c096c4553bee7c6aef24?apiKey=1e1d1af84687413c90642ed83011e3eb&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/1d2b7655353368ee015d1218868fd17b211992e57048c096c4553bee7c6aef24?apiKey=1e1d1af84687413c90642ed83011e3eb&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/1d2b7655353368ee015d1218868fd17b211992e57048c096c4553bee7c6aef24?apiKey=1e1d1af84687413c90642ed83011e3eb&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/1d2b7655353368ee015d1218868fd17b211992e57048c096c4553bee7c6aef24?apiKey=1e1d1af84687413c90642ed83011e3eb&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/1d2b7655353368ee015d1218868fd17b211992e57048c096c4553bee7c6aef24?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/1d2b7655353368ee015d1218868fd17b211992e57048c096c4553bee7c6aef24?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/1d2b7655353368ee015d1218868fd17b211992e57048c096c4553bee7c6aef24?apiKey=1e1d1af84687413c90642ed83011e3eb&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/1d2b7655353368ee015d1218868fd17b211992e57048c096c4553bee7c6aef24?apiKey=1e1d1af84687413c90642ed83011e3eb&"
-            />
-            <div style="font-size: 50px; color: white; font-family: 'Atomic Age', cursive;">Burger Delight</div>
-            <div class="div-22" style="font-size: 18px">
-              Phone: +9478 662 489
-              <br/>
-              Email: contact.burgerdelight.com
-              <br/>
-              Address: 48, Mahavila, Panadura, Sri Lanka, 12500
-            </div>
-          </span>
-                </div>
-
-                <div class="column-6">
-
-
-          <span class="span-8">
-
-            <div class="mb-3">
-                <label class="form-label" for="customerName" style="color: #9a9292">Name</label>
-                <input class="form-control" id="customerName" placeholder="Ruvini Rangathara" type="text">
-            </div>
-                 <div class="mb-3">
-                <label class="form-label" for="customerEmail" style="color: #9a9292">Email address</label>
-                <input class="form-control" id="customerEmail" placeholder="name@example.com" type="email">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="customerMessage" style="color: #9a9292">Your Message</label>
-                <textarea class="form-control" id="customerMessage" rows="3"></textarea>
-            </div>
-            <span class="span-9">Submit</span>
-
-          </span>
-                </div>
-            </div>
-            <br><br>
-
-        </div>
-    </div>
-
-</div>
-<!--    ================================================================================-->
-
-
-
-
-
-
-
-
-<!--    ================================ footer =================================-->
-<div class="div-31" style="margin-top: 100px; width: auto">
-
-    <span class="span-10">
-      <div class="div-32">
-        <span class="span-11">
-          <span class="span">
-            <img
-                    class="img-7"
-                    loading="lazy"
-                    srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/a798b60f1dc79e0edf5d3a265664515f740469d3a9cee17244ae897c5cee9ba0?apiKey=1e1d1af84687413c90642ed83011e3eb&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a798b60f1dc79e0edf5d3a265664515f740469d3a9cee17244ae897c5cee9ba0?apiKey=1e1d1af84687413c90642ed83011e3eb&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a798b60f1dc79e0edf5d3a265664515f740469d3a9cee17244ae897c5cee9ba0?apiKey=1e1d1af84687413c90642ed83011e3eb&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a798b60f1dc79e0edf5d3a265664515f740469d3a9cee17244ae897c5cee9ba0?apiKey=1e1d1af84687413c90642ed83011e3eb&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a798b60f1dc79e0edf5d3a265664515f740469d3a9cee17244ae897c5cee9ba0?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a798b60f1dc79e0edf5d3a265664515f740469d3a9cee17244ae897c5cee9ba0?apiKey=1e1d1af84687413c90642ed83011e3eb&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a798b60f1dc79e0edf5d3a265664515f740469d3a9cee17244ae897c5cee9ba0?apiKey=1e1d1af84687413c90642ed83011e3eb&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a798b60f1dc79e0edf5d3a265664515f740469d3a9cee17244ae897c5cee9ba0?apiKey=1e1d1af84687413c90642ed83011e3eb&"
-            />
-            <div class="div-33">Burger Delight</div>
-          </span>
-
-          <div class="div-34">
-              Our Location : <br>
-              Burger Delight , No : 48, Mahavila, Panadura, Sri Lanka<br><br>
-              24/7 Hot Line : <br>+9478 662 8489 / +9477 185 6183
-          </div>
-
-        </span>
-        <span class="span-12">
-          <div class="div-38" style="font-size: 18px">
-                   <span class="span-13" style="margin-right: 10px">
-            <div class="div-39" style="font-size: 18px">Phone: +9478 662 489</div>
-            <div class="div-40" style="font-size: 18px">Email: contact.burgerdelight.com</div>
-            <div class="div-41" style="font-size: 18px">Address: 48, Mahavila, Panadura, Sri Lanka, 12500</div>
-          </span>
-          </div>
-          <span class="span-13" style="margin-left: 30px">
-            <div class="div-39" style="font-size: 18px">Privacy Policy</div>
-            <div class="div-40" style="font-size: 18px">Terms & Conditions</div>
-            <div class="div-41" style="font-size: 18px">About Us</div>
-          </span>
-        </span>
-      </div>
-<!--        <hr style="width: 100%; opacity: 50%; margin-top: 40px">-->
-      <div class="div-42">
-        Copyright c 2023 Burger Delight | Built by Ruvini Rangathara
-      </div>
-    </span>
-</div>
-<!--==========================================================================================-->
 
 <script src="asset/jquery-3.7.0.min.js"></script>
-<!--<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>-->
-<script src="customer.js"></script>
-<script src="init.js"></script>
-<script src="food.js"></script>
+<script src="js/login.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>

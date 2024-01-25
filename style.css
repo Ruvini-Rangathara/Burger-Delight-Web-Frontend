@@ -701,8 +701,8 @@ body {
     background-color: #c05d02;
     color: #fff;
     border: none;
-    border-radius: 15px;
-    /*padding: 5px 20px;*/
+    border-radius: 10px;
+    padding: 5px 20px;
     font-size: 20px;
     cursor: pointer;
     transition: 0.3s;

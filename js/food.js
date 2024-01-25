@@ -10,6 +10,8 @@ $(document).ready(function () {
         }
     })
 
+    getAllBurger();
+    getAllBeverages();
     getNewFoodId();
 });
 
@@ -199,4 +201,174 @@ function deleteFood() {
 function newFood() {
     resetFoodForm();
     getNewFoodId();
+}
+
+// ======================================= get All burger =======================================
+
+function createDynamicFoodCard(foodData) {
+    var category = foodData.category;
+
+    const colDiv = document.createElement("div");
+    colDiv.className = "col-md-3 mb-4"; // Adjust the width based on the number of cards you want in a row
+
+
+    const cardDiv = document.createElement("div");
+    cardDiv.className = "custom-card"; // Apply your custom card styles
+    cardDiv.style.width = "350px";
+    cardDiv.style.height = "555px";
+    cardDiv.style.backgroundColor = "#171717";
+    cardDiv.style.color = "white";
+    cardDiv.style.borderRadius= "10px";
+
+
+    const imgElement = document.createElement("img");
+    imgElement.className = "card-img"; // Apply your custom card image styles
+
+    if(category === "Burger"){
+        imgElement.src = "asset/image/burger2.png";
+    }else if(category === "Beverage"){
+        imgElement.src = "asset/image/beverage.png";
+    }
+    imgElement.alt = "Food Image";
+    imgElement.style.width = "350px";
+    imgElement.style.height = "320px";
+    imgElement.style.borderRadius= "10px";
+
+    const cardBodyDiv = document.createElement("div");
+    cardBodyDiv.className = "card-body";
+    cardBodyDiv.style.padding = "10px 20px";
+
+    const titleElement = document.createElement("h5");
+    titleElement.className = "card-title";
+    titleElement.textContent = foodData.name;
+    titleElement.style.marginBottom="3px";
+    titleElement.style.fontSize="20px";
+
+    const descriptionElement = document.createElement("p");
+    descriptionElement.className = "card-text";
+    descriptionElement.textContent = foodData.description;
+    descriptionElement.style.fontSize="18px";
+
+    const priceElement = document.createElement("p");
+    priceElement.className = "card-text";
+    priceElement.textContent = `Price: ${foodData.price}`;
+
+    const addToCartButton = document.createElement("button");
+    addToCartButton.className = "btn-card";
+    addToCartButton.type = "button";
+    addToCartButton.textContent = "Add To Cart";
+
+    // Add event listener for Add to Cart button
+    addToCartButton.addEventListener("click", function () {
+        // Add logic for adding the food to the cart
+        // You can call a function or perform any action here
+        alert("Added to Cart: " + foodData.name);
+    });
+
+    cardBodyDiv.appendChild(titleElement);
+    cardBodyDiv.appendChild(descriptionElement);
+    cardBodyDiv.appendChild(priceElement);
+    cardBodyDiv.appendChild(addToCartButton);
+
+    cardDiv.appendChild(imgElement);
+    cardDiv.appendChild(cardBodyDiv);
+    colDiv.appendChild(cardDiv);
+
+    return colDiv;
+}
+
+
+function getAllBurger() {
+
+    var category = "Burger";
+
+    $.ajax({
+        url: 'http://localhost:8080/api/v1/food/getByCategory/' + category,
+        type: 'GET',
+        dataType: 'json',
+        success: function (response) {
+            if (response.code === '00') {
+                var foodList = response.content;
+
+                // Check if foodList is an array
+                if (Array.isArray(foodList)) {
+                    // Clear existing content in the food container
+                    $('#food-container').empty();
+
+                    // Iterate through the food list and create cards
+                    foodList.forEach(function(food) {
+                        // Call the setFoodCards function to create and append the card
+                        setBurgerCards(food);
+                    });
+                } else {
+                    console.error('Invalid format for foodList:', foodList);
+                }
+            } else {
+                // Show error message
+                alert(response.message);
+            }
+        },
+        error: function (error) {
+            console.error('Error getting food:', error);
+        }
+    });
+}
+
+
+// Function to set food cards
+function setBurgerCards(data) {
+    // Append the dynamicFoodCard to your container element
+    const container = document.getElementById("burger-container");
+    container.appendChild(createDynamicFoodCard(data));
+}
+
+
+// ============================================ get All beverages ==================================
+function getAllBeverages() {
+
+    var category = "Beverage";
+
+    $.ajax({
+        url: 'http://localhost:8080/api/v1/food/getByCategory/' + category,
+        type: 'GET',
+        dataType: 'json',
+        success: function (response) {
+            if (response.code === '00') {
+                var foodList = response.content;
+
+                // Check if foodList is an array
+                if (Array.isArray(foodList)) {
+                    // Clear existing content in the food container
+                    $('#food-container').empty();
+
+                    // Iterate through the food list and create cards
+                    foodList.forEach(function(food) {
+                        setBeverageCards(food);
+                    });
+                } else {
+                    console.error('Invalid format for foodList:', foodList);
+                }
+            } else {
+                // Show error message
+                alert(response.message);
+            }
+        },
+        error: function (error) {
+            console.error('Error getting food:', error);
+        }
+    });
+}
+
+function setBeverageCards(data) {
+    // Append the dynamicFoodCard to your container element
+    const container = document.getElementById("beverage-container");
+    container.appendChild(createDynamicFoodCard(data));
+}
+
+function showFoodForm() {
+    $('#food-form').show();
+}
+
+function closeFoodForm() {
+    $('#food-form').hide();
 }

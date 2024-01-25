@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Burger Delight</title>
+
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/35c4f0c859.js"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&family=Sofia+Sans:wght@300;400;700&display=swap"
+          rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+
+        #user_profile{
+            display: none;
+        }
+
+        #user_p_div{
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+
+        button{
+            height: 30px;
+        }
+
+        input[type=text], input[type=number], input[type=date], input[type=email],
+        input[type=tel], input[type=password] {
+            font-size: 15px;
+            height: 25px;
+        !important;
+        }
+
+        input[type=file] {
+            height: 30px;
+        !important;
+        }
+
+    </style>
+
+</head>
+<body>
+<!-- Your page content goes here -->
+
+<!--======================================  sign up page  ==========================================-->
+<section id="signup_page" style="margin-top: 30px" class="position-relative py-4 py-xl-5">
+    <div class="container">
+        <div id="user_p_div">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h4 id="welcome_header">Welcome To Burger Delight!</h4>
+
+                <p style="color: #055160" class="w-lg-50">&quot;Burger Delight's website login page is a
+                    secure portal for customers and staff. Users enter a username and password
+                    to access personalized features.&quot;</p>
+
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center" style="margin-top: 60px; width: 800px">
+            <div class="col-md-6 col-xl-4">
+                <div class="card mb-5" style="width: 550px">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <div class="bs-icon-xl bs-icon-circle bs-icon-primary bs-icon my-4">
+                            <h2>Sign Up</h2>
+                        </div>
+                        <form class="text-center" method="post">
+
+                            <div class="mb-3" style="width: 350px;">
+                                <input class="form-control" name="name" placeholder="Name"
+                                                     type="text" id="register_name"/>
+                            </div>
+
+                            <div class="mb-3">
+                                <input class="form-control" name="phone" placeholder="Contact No"
+                                                     type="text" id="register_phone"/>
+                            </div>
+
+                            <div class="mb-3">
+                                <input class="form-control" name="address" placeholder="Address"
+                                                     type="text" id="register_address"/>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <input class="form-control" name="email" placeholder="Email"
+                                                     type="text" id="register_email"/>
+                            </div>
+
+                            <div class="mb-3">
+                                <input class="form-control" name="password" placeholder="Password"
+                                                     type="password" id="register_password"/>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <button id="next_button"
+                                        type="button"
+                                        onclick="register()"
+                                        style="background-color: #c05d02; color: white; border: none; text-align: center; border-radius: 7px"
+                                        class="btn d-block w-100" >
+                                    Register
+                                </button>
+                            </div>
+                            <a class="text-muted" href="index.html"> Login</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="asset/jquery-3.7.0.min.js"></script>
+<script src="js/signup.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

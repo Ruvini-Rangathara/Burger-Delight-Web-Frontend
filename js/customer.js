@@ -209,3 +209,9 @@ function setDefaultCustomerDetails() {
     $('#customer-password').val('***********');
     $("#customer-save-button").text("Register");
 }
+
+
+function logout() {
+    window.location.href = "index.html";
+}
+

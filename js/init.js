@@ -11,7 +11,7 @@ $(document).ready(function() {
         navigateTo(sectionId);
     });
 
-    $("#food-form, #customer-form").css('display', 'block');
+    $("#food-form, #customer-form, #order-form").css('display', 'none');
 
 });
 
@@ -21,6 +21,10 @@ function navigateTo(sectionId) {
 
     var selectedSection = $('#' + sectionId);
     selectedSection.css('display', 'block');
+
+    if(sectionId === 'home') {
+        $('#food').css('display', 'block');
+    }
 }
 
 
