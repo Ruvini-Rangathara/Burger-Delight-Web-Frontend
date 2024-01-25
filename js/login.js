@@ -30,6 +30,7 @@ function login() {
                     // Customer allowed to login
                     console.log('Login successful');
                     localStorage.setItem('customerId',response.content );
+                    localStorage.setItem('customerEmail',email );
                     window.location.href = 'dashboard.html';
                 } else {
                     // Customer not allowed to login

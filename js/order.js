@@ -352,29 +352,6 @@ function clearOrderForm() {
     $('#order-table tbody').empty();
     $('#total').val(0);
 }
-
-// ========================================= delete cart ===========================================
-function deleteOrder() {
-    var orderId = $('#order-id-label').text().trim();
-
-    $.ajax({
-        url: 'http://localhost:8080/api/v1/order/delete/' + orderId, type: 'DELETE', success: function (response) {
-            if (response.code === '00') {
-                console.log('Order deleted successfully:', response.content);
-                alert('Order deleted successfully');
-                getNewOrderId();
-                clearOrderForm();
-                getMyOrders();
-            } else {
-                console.log('Failed to delete order:', response.message);
-                alert('Failed to delete order');
-            }
-        }, error: function (error) {
-            console.error('Error deleting order:', error);
-        }
-    });
-}
-
 // ================================================================================================
 
 // ========================================= placeOrder ===========================================
@@ -434,6 +411,7 @@ function placeOrder() {
                 clearOrderForm();
                 getMyOrders();
                 loadPendingOrdersToCartTable();
+                sendMail(order);
             } else if (response.code === '03') {
                 alert('Order not found');
             } else {
@@ -442,6 +420,42 @@ function placeOrder() {
         },
         error: function (error) {
             console.error('Error updating order:', error);
+        }
+    });
+}
+
+function sendMail(order) {
+
+    // var to = localStorage.getItem('customerEmail');
+    var to = "ruvinisubhasinghe200009@gmail.com";
+    var subject = 'Order Confirmation';
+
+    //give all details about order in body
+    var body = 'Your order has been placed successfully. \n\n' +
+        'Order ID: ' + order.id + '\n' +
+        'Date: ' + order.date + '\n' +
+        'Total: ' + order.total + '\n\n' +
+        'Thank you for ordering from us.';
+    var mail = {
+        to: to,
+        subject: subject,
+        body: body
+    }
+    $.ajax({
+        url: 'http://localhost:8080/api/v1/mail/send',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(mail),
+        success: function (response) {
+            console.log('Response:', response)
+            if (response === '00') {
+                console.log('Mail sent successfully:', response.content);
+            } else {
+                console.log('Failed to send mail:', response.message);
+            }
+        },
+        error: function (error) {
+            console.error('Error sending mail:', error);
         }
     });
 }
